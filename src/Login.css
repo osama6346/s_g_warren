@@ -1,0 +1,42 @@
+.insidelogin {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  box-sizing: border-box;
+}
+
+.logininputs {
+  display: flex;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+.insidelogin input {
+  margin: 10px;
+  border: 1px solid;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  text-align: center;
+  font-weight: bold;
+  padding: 0; /* Add this line to reset padding */
+  margin: 10px;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+button.login {
+    background-color: #2d7672;
+    color: white;
+    width: 70%;
+    padding: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    margin: 0 auto;
+    margin-top: 20px;
+  }

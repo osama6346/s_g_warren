@@ -1,0 +1,192 @@
+/* FormDashboard.css */
+.form-container {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f5f5f5;
+  overflow: scroll;
+  box-sizing: border-box;
+}
+
+.top-div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px;
+  padding-bottom: 5px;
+  background-color: #ffffff;
+}
+
+.formcontained {
+  width: 100%;
+  padding-top: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  box-sizing: border-box;
+}
+
+.innerform {
+  margin: 50px;
+  margin-top: 20px;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  background-color: #ffffff;
+  box-sizing: border-box;
+}
+
+.form-input {
+  margin-bottom: 5px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+.form-input p {
+  font-size: small;
+  font-weight: bold;
+  margin-bottom: 0px;
+}
+.form-input input {
+  border: none;
+  outline: none;
+  padding: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  width: 70%;
+  margin-top: 2px;
+}
+.comments{
+    border: none;
+  outline: none;
+  padding: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  width: 70%;
+  margin-top: 2px;
+}
+
+.split-input {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.date-dropdown {
+  display: flex;
+  width: 100%;
+  margin-bottom: 15px;
+}
+.date-dropdown select {
+  width: 15%;
+  padding: 10px;
+  margin-left: 5px;
+  background-color: white;
+  border: none;
+  outline: none;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.submit-button {
+  background-color: #085e59;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 120px;
+  margin-top: 10px;
+}
+.close-button {
+    
+  background-color: #ffffff;
+  color: #085e59;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 120px;
+  margin-top: 10px;
+  border: 1px solid #085e59;
+}
+.submit-button:hover{
+    background-color: #f5f5f5;
+    color: #085e59;
+}
+.close-button:hover{
+    color: #f5f5f5;
+    background-color: #085e59;
+}
+
+/* Add this CSS to your stylesheet */
+.popup-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+  .ima{
+    width: 100px;
+    height: 100px;
+    background-color: #beffdd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    margin: 0 auto;
+  }
+  .popup-content {
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    max-width: 80%; /* Adjust the width as needed */
+  }
+  
+  /* Center the image */
+  .confirmation-image {
+    margin: 0 auto;
+  }
+  
+  /* Style the buttons */
+  .popup-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .popup-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .popup-button.close {
+    background-color: red; /* Change to your desired color */
+    color: white;
+  }
+  
+  .popup-button.submit {
+    background-color: green; /* Change to your desired color */
+    color: white;
+  }
+  
+  
+@media (max-width: 768px) {
+    .form-input input {
+        width: 100%;
+      }
+      .date-dropdown select {
+        width: 30%;
+      }
+  }
+/* Add more styling as needed */
