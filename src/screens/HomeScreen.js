@@ -92,7 +92,7 @@ const HomeScreen = () => {
           <div className="contact-option">
             <img src={fone} alt="Option 1" className="option-image" />
             <div className="option-text">
-              <p>Phone Number</p>
+              <p>PhoneNumber</p>
               <p>440 791 9510</p>
             </div>
           </div>

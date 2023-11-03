@@ -79,12 +79,14 @@
     box-sizing: border-box;
     padding: 20px;
     padding-bottom: 0px;
+    box-sizing: border-box;
   }
   .insidecontainer{
     display: flex;
     flex-direction: column;
     width: 100%;
     height: 100vh;
+    box-sizing: border-box;
   }
   .statisticsdiv{
     width: 100%;
@@ -94,12 +96,15 @@
     padding: 20px;
     margin-top: 5px;
     border-radius: 10px;
+    box-sizing: border-box;
   }
   .statinside{
     display: flex;
     justify-content: space-between;
     padding: 40px;
     padding-bottom: 20px;
+    box-sizing: border-box;
+    flex-wrap: wrap;
   }
   .statstext{
     font-size: 20px;
@@ -145,6 +150,16 @@
     padding: 20px;
     margin-top: 20px;
     border-radius: 10px;
+  }
+  .formdiv{
+    background-color: #fff;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    flex-wrap: wrap;
   }
 
   .formstable {
@@ -238,4 +253,20 @@
   }
   .approve-button:hover{
     background-color: #1a524e;
+  }
+
+  
+  @media (max-width: 768px) { 
+    .statinside{
+      flex-direction: column;
+
+    }
+    .statoptions{
+      padding: 5px;
+    }
+    th, td{
+      width: 25%;
+      font-size: 12px;
+    }
+    
   }

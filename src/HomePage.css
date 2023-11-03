@@ -63,6 +63,7 @@
   align-items: center;
   padding: 40px;
   padding-bottom: 0px;
+  box-sizing: border-box;
 }
 
 
@@ -143,6 +144,7 @@
     display: flex;
     width: 92%;
     flex-direction: column;
+    box-sizing:border-box;
   }
   
   .contact-options {
@@ -152,6 +154,7 @@
     justify-content: space-evenly;
     align-self: center;
     padding: 20px;
+    box-sizing: border-box;
   }
   .contact-option {
     display: flex;
@@ -179,5 +182,39 @@
     margin: 5px;
     margin-bottom: 0px;
     cursor: pointer;
+  }
+
+  @media (max-width: 768px) {
+    .contact-option {
+      flex-direction: row;
+      align-self: flex-start;
+    }
+    .contact-options{
+      justify-content: space-between;
+      flex-direction: column;
+      align-self: flex-start;
+    }
+    .qrimage{
+      display: none
+    }
+    .image-container{
+      display: none;
+    }
+    .middle-text{
+      width: 100%;
+    }
+    .middle-section{
+      padding: 5px;
+    }
+    .bottom-section{
+      padding: 0;
+      align-items: center;
+    }
+    .signbutton,
+.loginbutton {
+  width: 100px;
+  height: 40px;
+  font-size: 18px;
+}
   }
   

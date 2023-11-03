@@ -17,6 +17,7 @@
   padding: 20px;
   padding-bottom: 5px;
   background-color: #ffffff;
+  box-sizing: border-box;
 }
 
 .formcontained {
@@ -181,12 +182,17 @@
   }
   
   
-@media (max-width: 768px) {
+@media (max-width: 768px) { 
     .form-input input {
         width: 100%;
       }
       .date-dropdown select {
         width: 30%;
       }
+      .innerform{
+        width: 100%;
+        margin: 5px;
+      }
+
   }
 /* Add more styling as needed */

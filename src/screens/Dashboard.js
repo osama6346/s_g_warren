@@ -126,7 +126,7 @@ const DashboardComponent = () => {
             <p className="statstext">Form Submission</p>
             <Chart />
           </div>
-          <div className="chartdiv">
+          <div className="formdiv">
             <p className="statstext">Latest Form Submission</p>
             <div className="formstable">
           <table>
