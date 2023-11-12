@@ -6,7 +6,10 @@ import dashicon1 from "../assets/dashicon1.png";
 import dashicon2 from "../assets/dashicon2.png";
 import dashicon3 from "../assets/dashicon3.png";
 import filter from "../assets/icon_filter.png";
-import confirmationImage from '../assets/submit.png'
+import confirmationImage from "../assets/submit.png";
+
+import emailjs from "@emailjs/browser";
+import { useNavigate } from "react-router-dom";
 const Dropdown = ({ options, onSelect }) => {
   const [isOpen, setIsOpen] = useState(false);
   const handleOptionClick = (option) => {
@@ -39,36 +42,47 @@ const Dropdown = ({ options, onSelect }) => {
     </div>
   );
 };
-
 const FormDashboard = () => {
+  useEffect(()=>{
+    const namee = localStorage.getItem("name")
+    const phonee = localStorage.getItem("phone")
+    const compnayy = localStorage.getItem("company")
+    const emaill = localStorage.getItem("email")
+    setFormData({...formData, name: namee,phone: phonee, company: compnayy,email: emaill })
+  },[])
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
-    nameOfLoss: "",
+    name: "",
+    company: "",
+    phone: "",
+    email: "",
+    insuredname: "",
     address: "",
+    city: "",
     state: "",
-    zipCode: "",
-    insuredName: "",
-    insuredNumber: "",
-    insuredEmail: "",
+    zip: "",
+    contactphone: "",
+    contactemail: "",
+    lostaddress: "",
+    claimNumber: "",
     dateOfLoss: {
       day: "",
       month: "",
       year: "",
     },
-    typeOfLoss: "",
-    otherComments: "",
-    insuranceCompany: "",
-    policyNumber: "",
-    claimNumber: "",
-    adjusterNumber: "",
-    telNumber: "",
-    email: "",
-    comments: "",
+    scopeofservice: "",
   });
 
   const [isPopupOpen, setPopupOpen] = useState(false);
   const [isPopupOpen2, setPopupOpen2] = useState(false);
+  const [isError, setIsError] = useState(false);
+
   const openPopup = () => {
-    setPopupOpen(true);
+    if (validateForm()) {
+      setPopupOpen(true);
+    } else {
+      setIsError(true);
+    }
   };
   const openPopup2 = () => {
     setPopupOpen2(true);
@@ -80,6 +94,28 @@ const FormDashboard = () => {
   };
   const closePopup2 = () => {
     setPopupOpen2(false);
+  };
+  const validateForm = () => {
+    // Add your validation logic here
+    return (
+      formData.name &&
+      formData.company &&
+      formData.phone &&
+      formData.email &&
+      formData.insuredname &&
+      formData.address &&
+      formData.city &&
+      formData.state &&
+      formData.zip &&
+      formData.contactphone &&
+      formData.contactemail &&
+      formData.lostaddress &&
+      formData.claimNumber &&
+      formData.dateOfLoss.day &&
+      formData.dateOfLoss.month &&
+      formData.dateOfLoss.year &&
+      formData.scopeofservice
+    );
   };
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -94,12 +130,81 @@ const FormDashboard = () => {
     });
   };
 
+  const handleEmailSend = async ()=>{
+    try {
+      const emailData = {
+        service_id: "service_c75zadc",
+        template_id: "template_99gywf8",
+        user_id: "R00wYyZX6b2ZVrp4q",
+        template_params: {
+          name: formData.name,
+          message: `
+            Full Name: ${formData.name}
+            Company: ${formData.company}
+            Phone: ${formData.phone}
+            Email: ${formData.email}
+            Insurance Name: ${formData.insuredname}
+            Address: ${formData.address}
+            City: ${formData.city}
+            State: ${formData.state}
+            ZipCode: ${formData.zip}
+            Contact Phone: ${formData.contactphone}
+            Contact Email: ${formData.contactemail}
+            Lost Address: ${formData.lostaddress}
+            Date of Loss: ${formData.dateOfLoss.day}/${formData.dateOfLoss.month}/${formData.dateOfLoss.year}
+            Claim No.: ${formData.claimNumber}
+            Scope of Service Required: ${formData.scopeofservice}
+          `,
+          to_email: 'osamaiqbal0986346@gmail.com',
+        },
+      };
+
+      const response = await emailjs.send(
+        emailData.service_id,
+        emailData.template_id,
+        emailData.template_params,
+        emailData.user_id
+      );
+
+      console.log("Email sent successfully:", response);
+
+      // You can add additional logic here, such as showing a success message or navigating to another page.
+    } catch (error) {
+      console.error("Error sending email:", error);
+
+      // Handle the error, show an error message, or take appropriate action.
+    }
+  }
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission, you can access all form data in the 'formData' object.
-    console.log("Form Data:", formData);
+    if (validateForm()) {
+      console.log("Form Data:", formData);
+      setPopupOpen(true);
+    } else {
+      setIsError(true);
+    }
   };
-
+  const resetForm = () => {
+    setFormData({
+      insuredname: '',
+      address: '',
+      city: '',
+      state: '',
+      zip: '',
+      contactphone: '',
+      contactemail: '',
+      lostaddress: '',
+      claimNumber: '',
+      dateOfLoss: {
+        day: '',
+        month: '',
+        year: '',
+      },
+      scopeofservice: '',
+    });
+    setIsError(false);
+  
+  };
   const handleDropdownSelect = (selectedOption) => {
     // Handle the selected option here
     console.log("Selected Option: " + selectedOption);
@@ -107,24 +212,70 @@ const FormDashboard = () => {
   return (
     <div className="form-container">
       <div className="top-div">
-        <FaArrowLeft style={{ marginLeft: 10 }} size={20} />
-        <Dropdown
-          options={["Settings", "Log Out"]}
-          onSelect={handleDropdownSelect}
+        <FaArrowLeft
+          onClick={() => {
+            navigate("/login");
+          }}
+          style={{ marginLeft: 10, cursor: "pointer" , marginBottom:10}}
+          size={20}
         />
       </div>
       <div className="formcontained">
         <form onSubmit={handleSubmit}>
           <div className="innerform">
-            <h2 style={{ marginBottom: 20 }}>Report Loss</h2>
+            <h2 style={{ marginBottom: 20 }}>MAKE AN ASSIGNMENT </h2>
             <div className="form-input">
-              <p>Name of Loss</p>
+              <p>Full Name</p>
               <input
                 type="text"
-                name="nameOfLoss"
-                value={formData.nameOfLoss}
+                name="name"
+                value={formData.name}
                 onChange={handleInputChange}
-                placeholder="Name of Loss"
+                placeholder="Full Name"
+              />
+            </div>
+            <div className="form-input">
+              <p>Company</p>
+              <input
+                type="text"
+                name="company"
+                value={formData.company}
+                onChange={handleInputChange}
+                placeholder="Company"
+              />
+            </div>
+            <div className="form-input">
+              <p>Phone</p>
+              <input
+                type="text"
+                name="phone"
+                value={formData.phone}
+                onChange={handleInputChange}
+                placeholder="Phone"
+              />
+            </div>
+
+            <div className="form-input">
+              <p>Email</p>
+              <input
+                type="text"
+                name="email"
+                value={formData.email}
+                onChange={handleInputChange}
+                placeholder="Email"
+              />
+            </div>
+
+            <h2 style={{ marginBottom: 20 }}>Insured Information</h2>
+            <div className="form-input">
+              <p>Insured Name</p>
+
+              <input
+                type="text"
+                name="insuredname"
+                value={formData.insuredname}
+                onChange={handleInputChange}
+                placeholder="Insured Name"
               />
             </div>
             <div className="form-input">
@@ -137,46 +288,78 @@ const FormDashboard = () => {
                 placeholder="Address"
               />
             </div>
-            <div className="form-input">
-              <p>State/Zip Code</p>
-              <input
-                type="text"
-                name="zipCode"
-                value={formData.zipCode}
-                onChange={handleInputChange}
-                placeholder="Zip Code"
-              />
-            </div>
 
             <div className="form-input">
-              <p>Insured/Contact Name</p>
+              <p>City</p>
               <input
                 type="text"
-                name="insuredName"
-                value={formData.insuredName}
+                name="city"
+                value={formData.city}
                 onChange={handleInputChange}
-                placeholder="Insured Name"
+                placeholder="City"
               />
             </div>
             <div className="form-input">
-              <p>Insured/Contact Tel</p>
+              <p>State</p>
+              <input
+                type="text"
+                name="state"
+                value={formData.state}
+                onChange={handleInputChange}
+                placeholder="state"
+              />
+            </div>
+            <div className="form-input">
+              <p>ZipCode</p>
+              <input
+                type="text"
+                name="zip"
+                value={formData.zip}
+                onChange={handleInputChange}
+                placeholder="zip"
+              />
+            </div>
+            <div className="form-input">
+              <p>Contact Phone</p>
 
               <input
                 type="text"
-                name="insuredNumber"
-                value={formData.insuredNumber}
+                name="contactphone"
+                value={formData.contactphone}
                 onChange={handleInputChange}
-                placeholder="Insured Number"
+                placeholder="Contact Phone"
               />
             </div>
             <div className="form-input">
-              <p>Insured/Contact Email</p>
+              <p>Contact Email</p>
               <input
                 type="text"
-                name="insuredEmail"
-                value={formData.insuredEmail}
+                name="contactemail"
+                value={formData.contactemail}
                 onChange={handleInputChange}
-                placeholder="Insured Email"
+                placeholder="Contact Email"
+              />
+            </div>
+            <div className="form-input">
+              <p> Lost Address</p>
+
+              <input
+                type="text"
+                name="lostaddress"
+                value={formData.lostaddress}
+                onChange={handleInputChange}
+                placeholder="Lost Address- If Diff"
+              />
+            </div>
+            <div className="form-input">
+              <p>Claim Number</p>
+
+              <input
+                type="text"
+                name="claimNumber"
+                value={formData.claimNumber}
+                onChange={handleInputChange}
+                placeholder="Claim Number"
               />
             </div>
             <p
@@ -243,113 +426,36 @@ const FormDashboard = () => {
               </select>
             </div>
             <div className="form-input">
-              <p>Type of Loss</p>
-              <input
-                type="text"
-                name="typeOfLoss"
-                value={formData.typeOfLoss}
-                onChange={handleInputChange}
-                placeholder="Type of Loss"
-              />
-            </div>
-            <div className="form-input">
-              <p>If others</p>
-              <input
-                type="text"
-                name="otherComments"
-                value={formData.otherComments}
-                onChange={handleInputChange}
-                placeholder="Other Comments"
-              />
-            </div>
-            <h2 style={{ marginBottom: 20 }}>Insured Information</h2>
-            <div className="form-input">
-              <p>Insurance Company</p>
-              <input
-                type="text"
-                name="insuranceCompany"
-                value={formData.insuranceCompany}
-                onChange={handleInputChange}
-                placeholder="Insurance Company"
-              />
-            </div>
-            <div className="form-input">
-              <p>Policy Number</p>
+              <p>Scope of Service Required</p>
 
               <input
                 type="text"
-                name="policyNumber"
-                value={formData.policyNumber}
+                name="scopeofservice"
+                value={formData.scopeofservice}
                 onChange={handleInputChange}
-                placeholder="Policy Number"
-              />
-            </div>
-            <div className="form-input">
-              <p>Claim Number</p>
-
-              <input
-                type="text"
-                name="claimNumber"
-                value={formData.claimNumber}
-                onChange={handleInputChange}
-                placeholder="Claim Number"
-              />
-            </div>
-            <div className="form-input">
-              <p>Adjuster Number</p>
-
-              <input
-                type="text"
-                name="adjusterNumber"
-                value={formData.adjusterNumber}
-                onChange={handleInputChange}
-                placeholder="Adjuster Number"
-              />
-            </div>
-            <div className="form-input">
-              <p>Tel Number</p>
-
-              <input
-                type="text"
-                name="telNumber"
-                value={formData.telNumber}
-                onChange={handleInputChange}
-                placeholder="Tel Number"
-              />
-            </div>
-            <div className="form-input">
-              <p>Email</p>
-
-              <input
-                type="text"
-                name="email"
-                value={formData.email}
-                onChange={handleInputChange}
-                placeholder="Email"
+                placeholder="Scope of service required"
               />
             </div>
 
-            <div className="form-input">
-              <p>Services Req/Comments</p>
-              <textarea
-                className="comments"
-                rows="4" // Number of visible rows
-                placeholder="Enter your comments here..."
-              ></textarea>
-            </div>
             <button type="submit" className="submit-button" onClick={openPopup}>
               Submit
             </button>
+            {isError && (
+              <p style={{ color: "red", fontSize: "small", marginTop: "5px" }}>
+                Please fill in all fields.
+              </p>
+            )}
             {isPopupOpen && (
               <div className="popup-container">
                 <div className="popup-content">
-                  
-                  <div className="ima"><img
-                    src={confirmationImage}
-                    alt="Confirmation"
-                    className="confirmation-image"
-                  /></div>
-                  
+                  <div className="ima">
+                    <img
+                      src={confirmationImage}
+                      alt="Confirmation"
+                      className="confirmation-image"
+                    />
+                  </div>
+
                   <h2>Are you sure you want to </h2>
                   <h2>submit the form?</h2>
                   <div className="popup-buttons">
@@ -357,8 +463,11 @@ const FormDashboard = () => {
                       Close
                     </button>
                     <button
-                      onClick={()=>{ closePopup()
-                        openPopup2()}}
+                      onClick={() => {
+                        closePopup();
+                        handleEmailSend();
+                        openPopup2();
+                      }}
                       className="submit-button"
                     >
                       Submit
@@ -370,24 +479,26 @@ const FormDashboard = () => {
             {isPopupOpen2 && (
               <div className="popup-container">
                 <div className="popup-content">
-                  
-                  <div className="ima"><img
-                    src={confirmationImage}
-                    alt="Confirmation"
-                    className="confirmation-image"
-                  /></div>
-                  
+                  <div className="ima">
+                    <img
+                      src={confirmationImage}
+                      alt="Confirmation"
+                      className="confirmation-image"
+                    />
+                  </div>
+
                   <h2>Do you want to submit </h2>
                   <h2>another form?</h2>
                   <div className="popup-buttons">
-                    <button onClick={closePopup2} className="close-button">
-                      Close
+                    <button onClick={()=>{closePopup2()
+                    navigate("/login")
+                    }} className="close-button">
+                      No
                     </button>
-                    <button
-                      onClick={closePopup2}
-                      className="submit-button"
-                    >
-                      Submit
+                    <button onClick={()=>{closePopup2()
+                    resetForm()
+                    }} className="submit-button">
+                      Yes
                     </button>
                   </div>
                 </div>

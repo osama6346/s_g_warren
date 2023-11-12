@@ -9,7 +9,7 @@ import form from '../assets/form.png';
 import user from '../assets/Users.png';
 
 const Adminhome = () => {
-  const [selectedOption, setSelectedOption] = useState("dashboard");
+  const [selectedOption, setSelectedOption] = useState("users");
 
   const handleOptionClick = (option) => {
     setSelectedOption(option);
@@ -19,24 +19,8 @@ const Adminhome = () => {
     <div className="container">
       <div className="sidebar">
         <div className="sidebarcontainer">
-          <div
-            className={`sidebar-option ${
-              selectedOption === "dashboard" ? "active" : ""
-            }`}
-            onClick={() => handleOptionClick("dashboard")}
-          >
-            <FaTachometerAlt size={24} />
-            <span className="menuoption">Dashboards</span>
-          </div>
-          <div
-            className={`sidebar-option ${
-              selectedOption === "form" ? "active" : ""
-            }`}
-            onClick={() => handleOptionClick("form")}
-          >
-            <FaWpforms size={24} />
-            <span className="menuoption">Form</span>
-          </div>
+          
+          
           <div
             className={`sidebar-option ${
               selectedOption === "users" ? "active" : ""

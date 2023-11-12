@@ -16,8 +16,22 @@ import Adminhome from './screens/Adminhome'
 import Form from './screens/Form'
 function App() {
   
+  const [isAdminLoggedIn, setIsAdminLoggedIn] = useState(false);
+  const [isUserLoggedIn, setIsUserLoggedIn] = useState(false);
+  useEffect(() => {
+    // Check for isLoggedIn status in localStorage
+    const storedAdminLoggedIn = localStorage.getItem("isAdminLoggedIn");
+    const storedUserLoggedIn = localStorage.getItem("isUserLoggedIn");
+    if (storedAdminLoggedIn === "true") {
+      setIsAdminLoggedIn(true);
+    }
+    if (storedUserLoggedIn === "true") {
+      setIsUserLoggedIn(true);
+    }
+    
+  }, []);
 
-  return (
+  return (  
     <Router>
       <div>
         <Routes>
@@ -41,25 +55,38 @@ function App() {
             }
           />
           <Route
-            path="/reset"
+            path="/adminlogin"
             element={
-              <Reset/>
+              <Reset isAdminLoggedIn={isAdminLoggedIn}
+              setIsAdminLoggedIn={setIsAdminLoggedIn}/>
             }
           />
           <Route
             path="/adminhome"
             element={
-              <Adminhome/>
+              isAdminLoggedIn ? (
+                <Adminhome />
+              ):(
+                <Reset
+                  isAdminLoggedIn={isAdminLoggedIn}
+                  setIsAdminLoggedIn={setIsAdminLoggedIn}
+                />
+              )
             }
           />
           <Route
             path="/form"
             element={
-              <Form/>
+              isUserLoggedIn ? (
+                <Form />
+              ):(
+                <Login
+                  isUserLoggedIn={isUserLoggedIn}
+                  setIsUserLoggedIn={setIsUserLoggedIn}
+                />
+              )
             }
           />
-          
-        
         </Routes>
       </div>
     </Router>

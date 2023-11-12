@@ -136,7 +136,7 @@
 
   }
   .qrimage{
-    width: 60%;
+    width: 45%;
     padding: 40px;
   }
   .contact-section {
@@ -194,8 +194,11 @@
       flex-direction: column;
       align-self: flex-start;
     }
-    .qrimage{
+    .bottom-text{
       display: none
+    }
+    .qrimage{
+      width: 80%;
     }
     .image-container{
       display: none;

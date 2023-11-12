@@ -26,7 +26,7 @@ const HomeScreen = () => {
         </div>
         <div className="buttons">
           <button className="signbutton" onClick={()=>{navigate("Register")}}>Sign Up</button>
-          <button className="loginbutton">Login</button>
+          <button className="loginbutton" onClick={()=>{navigate("Login")}}>Login</button>
         </div>
       </div>
       <div className="middle-section">
@@ -112,11 +112,9 @@ const HomeScreen = () => {
           <img className="download-option" src={play} alt="playstore" />
         </div>
         <div className="mail-options">
-          <img className="download-option" src={twit} alt="twitter" />
-          <img className="download-option" src={facebook} alt="facebook" />
-          <img className="download-option" src={insta} alt="insta" />
+          <p style={{cursor:'pointer', marginBottom:0, borderBottomWidth:1, borderColor:'black'}} onClick={()=>{navigate("/adminlogin")}}>Go to Admin Login</p>
         </div>
-        <div className="copyright" style={{marginTop:10}}>Copyright@2015. All Rights Reserved</div>
+        <div className="copyright" style={{marginTop:0}}>Copyright@2015. All Rights Reserved</div>
       </div>
     </div>
   );
