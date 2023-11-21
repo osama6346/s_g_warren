@@ -86,21 +86,21 @@ const HomeScreen = () => {
             <img src={email} alt="Option 1" className="option-image" />
             <div className="option-text">
               <p>EMAIL</p>
-              <p>hello@gmail.com</p>
+              <a>scott@sgwarren.com</a>
             </div>
           </div>
           <div className="contact-option">
             <img src={fone} alt="Option 1" className="option-image" />
             <div className="option-text">
               <p>PhoneNumber</p>
-              <p>440 791 9510</p>
+              <p>440-799-9512</p>
             </div>
           </div>
           <div className="contact-option">
             <img src={loc} alt="Option 1" className="option-image" />
             <div className="option-text">
               <p>Location</p>
-              <p>Somewhere </p>
+              <p>Brecksville OH</p>
             </div>
           </div>
         </div>
