@@ -1,13 +1,13 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 .homepage-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 0px;
-  width: 100%;  
+  width: 100%;
 }
 
 .top-section {
@@ -66,7 +66,6 @@
   box-sizing: border-box;
 }
 
-
 .signbutton,
 .loginbutton {
   background-color: #2d7672;
@@ -105,119 +104,126 @@
 }
 
 .top-left-image {
-    position: absolute;
-    width: 80%;
-    height: 90%;
-    bottom: 0;
-    left: 0;
-    transform: translate(0, 0);
-  }
-  
-  .bottom-right-image {
-    width: 80%;
-    height: 70%;
-    top: 0;
-    right: 0;
-    transform: translate(30%, -10%);
-  }
-  .middle-text{
-    font-size: 25px;
-    padding: 80px;
-    color: white;
-    padding-left: 30px;
-    padding-bottom: 0px;
-    padding-top: 25px;
-    width: 95%;
-  }
-  .bottom-text{
-    padding: 50px;
-    padding-left: 10px;
-    width: 150%;
+  position: absolute;
+  width: 80%;
+  height: 90%;
+  bottom: 0;
+  left: 0;
+  transform: translate(0, 0);
+}
 
+.bottom-right-image {
+  width: 80%;
+  height: 70%;
+  top: 0;
+  right: 0;
+  transform: translate(30%, -10%);
+}
+.middle-text {
+  font-size: 25px;
+  padding: 80px;
+  color: white;
+  padding-left: 30px;
+  padding-bottom: 0px;
+  padding-top: 25px;
+  width: 95%;
+}
+.bottom-text {
+  padding: 50px;
+  padding-left: 10px;
+  width: 150%;
+}
+.qrimage {
+  width: 40%;
+  padding: 40px;
+}
+.contact-section {
+  padding: 50px;
+  display: flex;
+  width: 92%;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.contact-options {
+  display: flex;
+  gap: 10px;
+  width: 90%;
+  justify-content: space-evenly;
+  align-self: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.contact-option {
+  display: flex;
+  align-self: center;
+}
+.option-text {
+  padding: 5px;
+}
+.below-section {
+  display: flex;
+  width: 100%;
+  background-color: #2d7672;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  align-items: center;
+  padding: 30px;
+  padding-top: 10px;
+  box-sizing: border-box;
+}
+.download-options {
+  margin-top: 5px;
+}
+.download-option {
+  margin: 5px;
+  margin-bottom: 0px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .contact-option {
+    flex-direction: row;
+    align-self: flex-start;
   }
-  .qrimage{
-    width: 45%;
-    padding: 40px;
-  }
-  .contact-section {
-    padding: 50px;
-    display: flex;
-    width: 92%;
-    flex-direction: column;
-    box-sizing:border-box;
-  }
-  
   .contact-options {
-    display: flex;
-    gap: 10px;
-    width: 90%;
-    justify-content: space-evenly;
-    align-self: center;
-    padding: 20px;
+    justify-content: space-between;
+    flex-direction: column;
+    align-self: flex-start;
+  }
+  .bottom-section {
+    flex-direction: column;
     box-sizing: border-box;
   }
-  .contact-option {
-    display: flex;
-    align-self: center;
+  .bottom-text {
+    width: 70%;
+    margin-bottom: 0%;
   }
-  .option-text{
+  .qrimage {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 0px;
+  }
+  .image-container {
+    display: none;
+  }
+  .middle-text {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .middle-section {
     padding: 5px;
   }
-  .below-section{
-    display: flex;
-    width: 100%;
-    background-color: #2d7672;
-    flex-direction: column;
-    justify-content: center;
-    color: white;
+  .bottom-section {
+    padding: 0;
     align-items: center;
-    padding: 30px;
-    padding-top: 10px;
-    box-sizing: border-box;
   }
-  .download-options{
-    margin-top: 5px;
+  .signbutton,
+  .loginbutton {
+    width: 100px;
+    height: 40px;
+    font-size: 18px;
   }
-  .download-option{
-    margin: 5px;
-    margin-bottom: 0px;
-    cursor: pointer;
-  }
-
-  @media (max-width: 768px) {
-    .contact-option {
-      flex-direction: row;
-      align-self: flex-start;
-    }
-    .contact-options{
-      justify-content: space-between;
-      flex-direction: column;
-      align-self: flex-start;
-    }
-    .bottom-text{
-      display: none
-    }
-    .qrimage{
-      width: 80%;
-    }
-    .image-container{
-      display: none;
-    }
-    .middle-text{
-      width: 100%;
-    }
-    .middle-section{
-      padding: 5px;
-    }
-    .bottom-section{
-      padding: 0;
-      align-items: center;
-    }
-    .signbutton,
-.loginbutton {
-  width: 100px;
-  height: 40px;
-  font-size: 18px;
 }
-  }
-  

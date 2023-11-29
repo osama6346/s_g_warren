@@ -12,11 +12,8 @@ import play from "../assets/playstore.png";
 import twit from "../assets/twitter.png";
 import facebook from "../assets/fb.png";
 import insta from "../assets/insta.png";
-import {useNavigate,
-  redirect,
-} from "react-router-dom";
+import { useNavigate, redirect } from "react-router-dom";
 const HomeScreen = () => {
-  
   const navigate = useNavigate();
   return (
     <div className="homepage-container">
@@ -25,8 +22,22 @@ const HomeScreen = () => {
           <img src={logo} alt="Logo" />
         </div>
         <div className="buttons">
-          <button className="signbutton" onClick={()=>{navigate("Register")}}>Sign Up</button>
-          <button className="loginbutton" onClick={()=>{navigate("Login")}}>Login</button>
+          <button
+            className="signbutton"
+            onClick={() => {
+              navigate("Register");
+            }}
+          >
+            Sign Up
+          </button>
+          <button
+            className="loginbutton"
+            onClick={() => {
+              navigate("Login");
+            }}
+          >
+            Login
+          </button>
         </div>
       </div>
       <div className="middle-section">
@@ -46,33 +57,27 @@ const HomeScreen = () => {
       </div>
       <div className="bottom-section">
         <div className="bottom-text">
-          <h2 style={{marginBottom:10}}>Lorem ipsum, dolor sit amet consectetur</h2>
+          <h2 style={{ marginBottom: 10 }}>
+            Scan The QR Code to get access our app!!
+          </h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
-            tempora nostrum et odio laudantium placeat vitae accusamus. Omnis
-            labore harum, dicta facere veniam, ex doloremque itaque, eligendi
-            nulla delectus tempora distinctio? Aliquam enim voluptates nemo
-            tempora eaque accusantium sequi harum placeat iste ipsum, voluptatum
-            laborum dolores sed reiciendis qui distinctio praesentium ad ex
-            architecto. Maiores accusamus ducimus alias nostrum velit assumenda
-            corrupti ratione enim impedit doloremque libero quaerat in odio
-            corporis asperiores, perspiciatis maxime quibusdam voluptatibus
-            dignissimos iste? Harum sequi amet distinctio corrupti dolor
-            doloribus officia similique? Omnis minima dolores, animi qui totam
-            quasi, explicabo blanditiis minus saepe vel illo quis, soluta
-            voluptatum labore consequatur voluptatem laborum. Corporis delectus
-            obcaecati atque vitae aliquam quisquam voluptas autem consequatur
-            dolore asperiores quidem incidunt molestiae repellat, non enim cum
-            magnam harum exercitationem. Tempora accusantium velit beatae
-            voluptatum nihil impedit labore voluptatem adipisci error nobis
-            asperiores accusamus ut modi ducimus vel dolore cupiditate enim,
-            vitae minima atque eveniet cumque. Suscipit quae dolor consequatur
-            accusamus quia nisi voluptatem nulla rerum maiores tempora porro
-            fuga id deserunt, provident nam quisquam minus praesentium
-            perspiciatis accusantium error. Sit obcaecati corrupti totam soluta
-            aliquam sunt similique ea doloremque architecto facere! Numquam
-            voluptatibus dolorum ullam ad dolores? Pariatur, doloremque
-            expedita.
+            To get started, scan the QR code to be taken directly to our new
+            S.G.Warren & Assoc. app. You will then be assigned a unique 4-digit
+            code that will allow you access to the new Make An Assignment form.
+          </p>
+
+          <ul style={{marginLeft:20}}>
+            <li>Scan QR code</li>
+            <li>Download app</li>
+            <li>Request your 4-digit code</li>
+            <li>Enter code to use the new Make An Assignment form</li>
+          </ul>
+
+          <p>
+            After the initial sign-up, your code and the top section of the form
+            will both prefill for convenience. We’re proud to bring this to you
+            and hope it will help streamline your experience with S.G.Warren &
+            Assoc.
           </p>
         </div>
         <div className="qrimage">
@@ -108,13 +113,27 @@ const HomeScreen = () => {
       <div className="below-section">
         <h4>Download Now</h4>
         <div className="download-options">
-          <img  className="download-option" src={appstore} alt="appstore" />
+          <img className="download-option" src={appstore} alt="appstore" />
           <img className="download-option" src={play} alt="playstore" />
         </div>
         <div className="mail-options">
-          <p style={{cursor:'pointer', marginBottom:0, borderBottomWidth:1, borderColor:'black'}} onClick={()=>{navigate("/adminlogin")}}>Go to Admin Login</p>
+          <p
+            style={{
+              cursor: "pointer",
+              marginBottom: 0,
+              borderBottomWidth: 1,
+              borderColor: "black",
+            }}
+            onClick={() => {
+              navigate("/adminlogin");
+            }}
+          >
+            Go to Admin Login
+          </p>
         </div>
-        <div className="copyright" style={{marginTop:0}}>Copyright@2015. All Rights Reserved</div>
+        <div className="copyright" style={{ marginTop: 0 }}>
+          Copyright@2015. All Rights Reserved
+        </div>
       </div>
     </div>
   );

@@ -486,7 +486,8 @@ const FormDashboard = () => {
                       className="confirmation-image"
                     />
                   </div>
-
+                  <h3>Myself or one of my associates will get ahold of </h3>
+                  <h3>you within the next 24 hours. Thank you, Scott</h3>
                   <h2>Do you want to submit </h2>
                   <h2>another form?</h2>
                   <div className="popup-buttons">
