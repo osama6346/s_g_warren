@@ -150,6 +150,7 @@ const HomeScreen = () => {
               marginBottom: 0,
               borderBottomWidth: 1,
               borderColor: "black",
+              cursor:'pointer'
             }}
             onClick={() => {
               navigate("/adminlogin");
