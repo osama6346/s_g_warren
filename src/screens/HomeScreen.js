@@ -5,6 +5,7 @@ import dots from "../assets/dots bg.png";
 import house from "../assets/house.png";
 import qr from "../assets/qr.png";
 import email from "../assets/mail.png";
+import newhome from "../assets/NewHome.jpeg";
 import fone from "../assets/phone.png";
 import loc from "../assets/location.png";
 import appstore from "../assets/appstore.png";
@@ -41,18 +42,44 @@ const HomeScreen = () => {
         </div>
       </div>
       <div className="middle-section">
-        <div className="middle-text">
-          <h4>Lorem ipsum, dolor sit amet consectetur</h4>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem fugiat
-            recusandae praesentium id natus nemo vitae aliquid, libero odio
-            velit placeat laboriosam quod perferendis necessitatibus! Nisi,
-            dignissimos. Pariatur, ullam dicta?
-          </p>
-        </div>
+      <div className="middle-text">
+  <h2>Welcome to S.G. Warren & Associates.</h2>
+  <p >
+    S.G. Warren & Associates is a national consulting firm specializing
+    in the commercial construction and insurance industries, with an
+    emphasis on natural disasters, damage assessment, and Dispute
+    Resolution.
+  </p>
+  <p>
+    S.G. Warren & Associates recognizes service as the
+    primary component of the product we provide. We strive to deliver
+    the most detailed and accurate reporting at the most competitive
+    rates in the industry.
+  </p>
+  <p>
+    We are committed to providing the highest
+    level of communication while utilizing the most advanced
+    technologies available today. Those, combined with our extensive
+    depth of experience, result in strong, long-lasting client
+    relationships.
+  </p>
+
+  {/* Bulleted List */}
+  <ul style={{marginTop:10, marginLeft:25, fontSize:22}}>
+    <li>Vendor Support on Property Loss Estimating.</li>
+    <li>JOB SITE / Project Monitoring.</li>
+    <li>Mitigation Review and Audit.</li>
+    <li>Subrogation Review and Audit.</li>
+    <li>Dispute Resolution & Appraisal Services.</li>
+    <li>Litigation Support.</li>
+    <li>Builders Risk Services.</li>
+    <li>Lode Upgrade Analysis.</li>
+  </ul>
+</div>
+
         <div className="image-container">
           <img src={dots} alt="Dots" className="bottom-right-image" />
-          <img src={house} alt="House" className="top-left-image " />
+          <img src={newhome} alt="House" className="top-left-image " />
         </div>
       </div>
       <div className="bottom-section">
@@ -66,7 +93,7 @@ const HomeScreen = () => {
             code that will allow you access to the new Make An Assignment form.
           </p>
 
-          <ul style={{marginLeft:20}}>
+          <ul style={{ marginLeft: 20 }}>
             <li>Scan QR code</li>
             <li>Download app</li>
             <li>Request your 4-digit code</li>
@@ -105,7 +132,7 @@ const HomeScreen = () => {
             <img src={loc} alt="Option 1" className="option-image" />
             <div className="option-text">
               <p>Location</p>
-              <p>Brecksville OH</p>
+              <p>Corporate HQ, Brecksville OH</p>
             </div>
           </div>
         </div>

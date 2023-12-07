@@ -9,6 +9,9 @@
   padding: 0px;
   width: 100%;
 }
+.middle-text p{
+  font-size: 20px;
+}
 
 .top-section {
   display: flex;
@@ -61,7 +64,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 40px;
+  padding: 60px;
+  padding-top: 30px;
   padding-bottom: 0px;
   box-sizing: border-box;
 }
@@ -127,11 +131,15 @@
   padding-bottom: 0px;
   padding-top: 25px;
   width: 95%;
+  align-self: flex-start;
 }
 .bottom-text {
   padding: 50px;
   padding-left: 10px;
   width: 150%;
+}
+.bottom-text p{
+  font-size: 17px;
 }
 .qrimage {
   width: 40%;
