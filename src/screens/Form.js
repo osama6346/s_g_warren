@@ -43,13 +43,19 @@ const Dropdown = ({ options, onSelect }) => {
   );
 };
 const FormDashboard = () => {
-  useEffect(()=>{
-    const namee = localStorage.getItem("name")
-    const phonee = localStorage.getItem("phone")
-    const compnayy = localStorage.getItem("company")
-    const emaill = localStorage.getItem("email")
-    setFormData({...formData, name: namee,phone: phonee, company: compnayy,email: emaill })
-  },[])
+  useEffect(() => {
+    const namee = localStorage.getItem("name");
+    const phonee = localStorage.getItem("phone");
+    const compnayy = localStorage.getItem("company");
+    const emaill = localStorage.getItem("email");
+    setFormData({
+      ...formData,
+      name: namee,
+      phone: phonee,
+      company: compnayy,
+      email: emaill,
+    });
+  }, []);
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: "",
@@ -130,7 +136,7 @@ const FormDashboard = () => {
     });
   };
 
-  const handleEmailSend = async ()=>{
+  const handleEmailSend = async () => {
     try {
       const emailData = {
         service_id: "service_c75zadc",
@@ -155,7 +161,7 @@ const FormDashboard = () => {
             Claim No.: ${formData.claimNumber}
             Scope of Service Required: ${formData.scopeofservice}
           `,
-          to_email: 'osamaiqbal0986346@gmail.com',
+          to_email: "osamaiqbal0986346@gmail.com",
         },
       };
 
@@ -174,7 +180,7 @@ const FormDashboard = () => {
 
       // Handle the error, show an error message, or take appropriate action.
     }
-  }
+  };
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validateForm()) {
@@ -186,24 +192,23 @@ const FormDashboard = () => {
   };
   const resetForm = () => {
     setFormData({
-      insuredname: '',
-      address: '',
-      city: '',
-      state: '',
-      zip: '',
-      contactphone: '',
-      contactemail: '',
-      lostaddress: '',
-      claimNumber: '',
+      insuredname: "",
+      address: "",
+      city: "",
+      state: "",
+      zip: "",
+      contactphone: "",
+      contactemail: "",
+      lostaddress: "",
+      claimNumber: "",
       dateOfLoss: {
-        day: '',
-        month: '',
-        year: '',
+        day: "",
+        month: "",
+        year: "",
       },
-      scopeofservice: '',
+      scopeofservice: "",
     });
     setIsError(false);
-  
   };
   const handleDropdownSelect = (selectedOption) => {
     // Handle the selected option here
@@ -216,7 +221,7 @@ const FormDashboard = () => {
           onClick={() => {
             navigate("/login");
           }}
-          style={{ marginLeft: 10, cursor: "pointer" , marginBottom:10}}
+          style={{ marginLeft: 10, cursor: "pointer", marginBottom: 10 }}
           size={20}
         />
       </div>
@@ -428,13 +433,23 @@ const FormDashboard = () => {
             <div className="form-input">
               <p>Scope of Service Required</p>
 
-              <input
-                type="text"
-                name="scopeofservice"
-                value={formData.scopeofservice}
-                onChange={handleInputChange}
-                placeholder="Scope of service required"
-              />
+              <textarea
+  name="scopeofservice"
+  value={formData.scopeofservice}
+  onChange={handleInputChange}
+  placeholder="Scope of service required"
+  rows={5}
+  style={{
+    width: "70%",
+    border: "none",
+    outline: "none",
+    padding: "12px",
+    boxShadow: "0 0 20px rgba(0, 0, 0, 0.1)",
+    marginTop: "2px",
+    resize: "vertical", // optional: allows vertical resizing
+  }}
+/>
+
             </div>
 
             <button type="submit" className="submit-button" onClick={openPopup}>
@@ -491,14 +506,22 @@ const FormDashboard = () => {
                   <h2>Do you want to submit </h2>
                   <h2>another form?</h2>
                   <div className="popup-buttons">
-                    <button onClick={()=>{closePopup2()
-                    navigate("/login")
-                    }} className="close-button">
+                    <button
+                      onClick={() => {
+                        closePopup2();
+                        navigate("/login");
+                      }}
+                      className="close-button"
+                    >
                       No
                     </button>
-                    <button onClick={()=>{closePopup2()
-                    resetForm()
-                    }} className="submit-button">
+                    <button
+                      onClick={() => {
+                        closePopup2();
+                        resetForm();
+                      }}
+                      className="submit-button"
+                    >
                       Yes
                     </button>
                   </div>

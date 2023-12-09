@@ -1,8 +1,6 @@
 import React from "react";
 import "../HomePage.css";
 import logo from "../assets/logo.png";
-import dots from "../assets/dots bg.png";
-import house from "../assets/house.png";
 import qr from "../assets/qr.png";
 import email from "../assets/mail.png";
 import newhome from "../assets/NewHome.jpeg";
@@ -10,10 +8,7 @@ import fone from "../assets/phone.png";
 import loc from "../assets/location.png";
 import appstore from "../assets/appstore.png";
 import play from "../assets/playstore.png";
-import twit from "../assets/twitter.png";
-import facebook from "../assets/fb.png";
-import insta from "../assets/insta.png";
-import { useNavigate, redirect } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 const HomeScreen = () => {
   const navigate = useNavigate();
   return (
@@ -42,44 +37,49 @@ const HomeScreen = () => {
         </div>
       </div>
       <div className="middle-section">
-      <div className="middle-text">
-  <h2>Welcome to S.G. Warren & Associates.</h2>
-  <p >
-    S.G. Warren & Associates is a national consulting firm specializing
-    in the commercial construction and insurance industries, with an
-    emphasis on natural disasters, damage assessment, and Dispute
-    Resolution.
-  </p>
-  <p>
-    S.G. Warren & Associates recognizes service as the
-    primary component of the product we provide. We strive to deliver
-    the most detailed and accurate reporting at the most competitive
-    rates in the industry.
-  </p>
-  <p>
-    We are committed to providing the highest
-    level of communication while utilizing the most advanced
-    technologies available today. Those, combined with our extensive
-    depth of experience, result in strong, long-lasting client
-    relationships.
-  </p>
-
-  {/* Bulleted List */}
-  <ul style={{marginTop:10, marginLeft:25, fontSize:22}}>
-    <li>Vendor Support on Property Loss Estimating.</li>
-    <li>JOB SITE / Project Monitoring.</li>
-    <li>Mitigation Review and Audit.</li>
-    <li>Subrogation Review and Audit.</li>
-    <li>Dispute Resolution & Appraisal Services.</li>
-    <li>Litigation Support.</li>
-    <li>Builders Risk Services.</li>
-    <li>Lode Upgrade Analysis.</li>
-  </ul>
-</div>
-
         <div className="image-container">
-          <img src={dots} alt="Dots" className="bottom-right-image" />
           <img src={newhome} alt="House" className="top-left-image " />
+          <div className="approach">
+            <h2 className="mission">OUR MISSION</h2>
+            <p className="approachtext">
+              "...to provide the most reliable property consulting services to
+              the insurance market and appointed counsel while maintaining the
+              highest level of integrity possible..."
+            </p>
+          </div>
+        </div>
+        <h1 style={{color:'white', marginTop:20}} className="middle-heading">OUR APPROACH</h1>
+        <div className="middle-text">
+          <h2>Welcome to S.G. Warren & Assoc.</h2>
+          <p>
+            S.G. Warren & Assoc. is a national consulting firm specializing in
+            the commercial construction and insurance industries, with an
+            emphasis on natural disasters, damage assessment, and Dispute
+            Resolution.
+          </p>
+          <p>
+            S.G. Warren & Assoc. recognizes service as the primary component of
+            the product we provide. We strive to deliver the most detailed and
+            accurate reporting at the most competitive rates in the industry.
+          </p>
+          <p>
+            We are committed to providing the highest level of communication
+            while utilizing the most advanced technologies available today.
+            Those, combined with our extensive depth of experience, result in
+            strong, long-lasting client relationships.
+          </p>
+
+          {/* Bulleted List */}
+          <ul style={{ marginTop: 10, marginLeft: 25, fontSize: 22 }}>
+            <li>Vendor Support on Property Loss Estimating.</li>
+            <li>JOB SITE / Project Monitoring.</li>
+            <li>Mitigation Review and Audit.</li>
+            <li>Subrogation Review and Audit.</li>
+            <li>Dispute Resolution & Appraisal Services.</li>
+            <li>Litigation Support.</li>
+            <li>Builders Risk Services.</li>
+            <li>Lode Upgrade Analysis.</li>
+          </ul>
         </div>
       </div>
       <div className="bottom-section">
@@ -117,22 +117,22 @@ const HomeScreen = () => {
           <div className="contact-option">
             <img src={email} alt="Option 1" className="option-image" />
             <div className="option-text">
-              <p>EMAIL</p>
+              <p>Email</p>
               <a>scott@sgwarren.com</a>
             </div>
           </div>
           <div className="contact-option">
             <img src={fone} alt="Option 1" className="option-image" />
             <div className="option-text">
-              <p>PhoneNumber</p>
-              <p>440-799-9512</p>
+              <p>Phone Number</p>
+              <p>+440-799-9512</p>
             </div>
           </div>
           <div className="contact-option">
             <img src={loc} alt="Option 1" className="option-image" />
             <div className="option-text">
               <p>Location</p>
-              <p>Corporate HQ, Brecksville OH</p>
+              <p>8700 Riverview Road. Brecksville Ohio 44141-1727</p>
             </div>
           </div>
         </div>
@@ -150,7 +150,7 @@ const HomeScreen = () => {
               marginBottom: 0,
               borderBottomWidth: 1,
               borderColor: "black",
-              cursor:'pointer'
+              cursor: "pointer",
             }}
             onClick={() => {
               navigate("/adminlogin");

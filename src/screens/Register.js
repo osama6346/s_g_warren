@@ -7,7 +7,8 @@ import {
   ref,
   set,
 } from "../config/firebase";
-import house from "../assets/house.png";
+import house from "../assets/newhouse.jpeg";
+
 import logo from "../assets/logo.png";
 import "../Register.css";
 
@@ -124,15 +125,11 @@ const Register = () => {
         <div className="inside-right">
           <div className="text">
             <h3 className="rightheading">
-              Create an account and get Started!
+             Provide your details to Register!
             </h3>
-            <p className="smalltext">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. At
-              recusandae maxime ipsam consectetur amet beatae aliquid sed
-              dignissimos ex repudiandae?
-            </p>
+            
           </div>
-          <img src={house} alt="Your Image" />
+          <img className="house" src={house} alt="Your Image" />
         </div>
       </div>
     </div>

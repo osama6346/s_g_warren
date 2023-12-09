@@ -4,7 +4,7 @@ import { database, ref, onValue, update, get } from "../config/firebase";
 import "../Dashboard.css";
 import person from "../assets/person.png";
 import { FaSearch } from "react-icons/fa";
-
+import form from "../assets/form.png";
 import emailjs from "@emailjs/browser";
 const Dropdown = ({ options, onSelect }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -55,6 +55,8 @@ const UserDashboard = () => {
   });
 
   const [searchTerm, setSearchTerm] = useState("");
+
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
 
   useEffect(() => {
     // Fetch users from Firebase
@@ -149,17 +151,22 @@ const UserDashboard = () => {
     handleModalClose();
   };
 
-  const handleApproveClick = async (user) => {
+  const handleApproveClick = (user) => {
+    setSelectedUser(user);
+    setIsPopupOpen(true);
+  };
+
+  const handlePopupApprove = async () => {
     // Show a confirmation dialog
     const isConfirmed = window.confirm(
-      `Are you sure you want to approve ${user.fullName}?`
+      `Are you sure you want to approve ${selectedUser.fullName}?`
     );
   
     // If the user confirms, proceed with the approval
     if (isConfirmed) {
       const templateParams = {
-        to_email: user.email,
-        message: `Your Login code is ${user.verificationCode}. Use this code to login to the website`,
+        to_email: selectedUser.email,
+        message: `Your Login code is ${selectedUser.verificationCode}. Use this code to login to the website`,
         // Add any other parameters needed for your email template
       };
   
@@ -171,8 +178,8 @@ const UserDashboard = () => {
           "R00wYyZX6b2ZVrp4q"
         );
   
-        // If email is sent successfully, update the user status to "approved"
-        await update(ref(database, `users/${user.id}`), {
+        // Update the user status to "approved"
+        await update(ref(database, `users/${selectedUser.id}`), {
           status: "approved",
         });
   
@@ -194,8 +201,45 @@ const UserDashboard = () => {
         // Handle the error as needed
       }
     }
+  
+    // Close the popup
+    setIsPopupOpen(false);
   };
   
+
+  const handlePopupReject = () => {
+    // Show a confirmation dialog
+    const isConfirmed = window.confirm(
+      `Are you sure you want to reject ${selectedUser.fullName}?`
+    );
+  
+    // If the user confirms, proceed with the rejection
+    if (isConfirmed) {
+      // Close the popup
+      setIsPopupOpen(false);
+  
+      // Update the user status to "rejected"
+      update(ref(database, `users/${selectedUser.id}`), {
+        status: "rejected",
+      });
+  
+      // Fetch updated users from Firebase
+      const usersRef = ref(database, "users");
+      get(usersRef).then((usersSnapshot) => {
+        const usersArray = Object.entries(usersSnapshot.val()).map(
+          ([key, value]) => ({
+            id: key,
+            ...value,
+          })
+        );
+  
+        // Update the state with the new user data
+        setTableData(usersArray);
+      });
+    }
+  };
+  
+
   return (
     <div className="dash-container">
       <div className="search-bar">
@@ -234,10 +278,18 @@ const UserDashboard = () => {
                     <tr key={user.id}>
                       <td>
                         {user.status === "unapproved" ? (
-                          <button className="approve-button" onClick={() => handleApproveClick(user)}>Approve</button>
+                          <button
+                            className="approve-button"
+                            onClick={() => handleApproveClick(user)}
+                          >
+                            Approve
+                          </button>
+                        ) : user.status === "approved" ? (
+                          <span className="approved-text">Approved</span>
                         ) : (
-                          "Approved"
+                          <span className="rejected-text">Rejected</span>
                         )}
+
                         {/* Add additional buttons or actions as needed */}
                       </td>
                       <td>{user.verificationCode}</td>
@@ -296,6 +348,28 @@ const UserDashboard = () => {
           </div>
         </div>
       </div>
+      {isPopupOpen && (
+        <div className="popup-container">
+          <div className="popup-content">
+            <div className="image-con">
+              <img
+                src={form}
+                alt="Confirmation"
+                className="confirmation-image"
+              />
+            </div>
+            <h2>Are you sure you want to approve {selectedUser?.fullName}?</h2>
+            <div className="popup-buttons">
+              <button onClick={handlePopupApprove} className="approve-button">
+                Approve
+              </button>
+              <button onClick={handlePopupReject} className="reject-button">
+                Reject
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
       <Modal
         isOpen={isModalOpen}
         onRequestClose={handleModalClose}

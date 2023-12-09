@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../Register.css";
-import house from "../assets/house.png";
+import house from "../assets/newhouse.jpeg";
 import logo from "../assets/logo.png";
 
 const ResetCode = ({ setIsAdminLoggedIn }) => {
@@ -64,15 +64,11 @@ const ResetCode = ({ setIsAdminLoggedIn }) => {
         <div className="inside-right">
           <div className="text">
             <h3 className="rightheading">
-              Create an account and get Started!
+             Provide your credentials to continue to Dashboard.
             </h3>
-            <p className="smalltext">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. At
-              recusandae maxime ipsam consectetur amet beatae aliquid sed
-              dignissimos ex repudiandae?
-            </p>
+           
           </div>
-          <img src={house} alt="Your Image" />
+          <img className="house" src={house} alt="Your Image" />
         </div>
       </div>
     </div>

@@ -120,6 +120,9 @@ img {
   max-width: 100%;
   height: auto;
 }
+.house {
+  width: 60%;
+}
 @media (max-width: 768px) {
     .right {
       display: none;

@@ -41,6 +41,9 @@ button.login {
   margin-top: 20px;
 }
 
+.house {
+  width: 60%;
+}
 @media (max-width: 768px) {
   .insidelogin input {
     width: 50px;
