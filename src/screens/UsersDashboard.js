@@ -243,7 +243,7 @@ const UserDashboard = () => {
   return (
     <div className="dash-container">
       <div className="search-bar">
-        <Dropdown options={["Settings", "Log Out"]} onSelect={() => {}} />
+        
       </div>
       <div className="dashboardcontainer">
         <div className="insidecontainer">
