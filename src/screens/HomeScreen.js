@@ -40,28 +40,41 @@ const HomeScreen = () => {
         <div className="image-container">
           <img src={newhome} alt="House" className="top-left-image " />
           <div className="approach">
-            <h2 className="mission">OUR MISSION</h2>
+            <h2 className="mission" style={{marginTop:5}}>OUR MISSION</h2>
             <p className="approachtext">
               "...to provide the most reliable property consulting services to
               the insurance market and appointed counsel while maintaining the
               highest level of integrity possible..."
             </p>
+            <h3 className="scottname">           Scott G. Warren</h3>
           </div>
         </div>
-        <h1 style={{color:'white', marginTop:20}} className="middle-heading">OUR APPROACH</h1>
+        <p style={{ marginTop: 15 }}></p>
+        <h1
+          style={{ color: "white", marginTop: 20 }}
+          className="middle-heading"
+        >
+          OUR APPROACH
+        </h1>
         <div className="middle-text">
+          <p style={{ marginTop: 10 }}></p>
           <h2>Welcome to S.G. Warren & Assoc.</h2>
+          <p style={{ marginTop: 15 }}></p>
           <p>
             S.G. Warren & Assoc. is a national consulting firm specializing in
             the commercial construction and insurance industries, with an
             emphasis on natural disasters, damage assessment, and Dispute
             Resolution.
           </p>
+          <p style={{ marginTop: 15 }}></p>
+
           <p>
             S.G. Warren & Assoc. recognizes service as the primary component of
             the product we provide. We strive to deliver the most detailed and
             accurate reporting at the most competitive rates in the industry.
           </p>
+          <p style={{ marginTop: 15 }}></p>
+
           <p>
             We are committed to providing the highest level of communication
             while utilizing the most advanced technologies available today.
@@ -70,15 +83,23 @@ const HomeScreen = () => {
           </p>
 
           {/* Bulleted List */}
-          <ul style={{ marginTop: 10, marginLeft: 25, fontSize: 22 }}>
-            <li>Vendor Support on Property Loss Estimating.</li>
-            <li>JOB SITE / Project Monitoring.</li>
-            <li>Mitigation Review and Audit.</li>
-            <li>Subrogation Review and Audit.</li>
-            <li>Dispute Resolution & Appraisal Services.</li>
-            <li>Litigation Support.</li>
-            <li>Builders Risk Services.</li>
-            <li>Lode Upgrade Analysis.</li>
+          <ul
+            style={{
+              marginTop: 30,
+              marginLeft: 25,
+              fontSize: 20,
+              listStyleType: "none",
+              textAlign:'left',
+            }}
+          >
+            <li>&gt; Vendor Support on Property Loss Estimating.</li>
+            <li style={{marginTop:5}}>&gt; JOB SITE / Project Monitoring.</li>
+            <li style={{marginTop:5}}>&gt; Mitigation Review and Audit.</li>
+            <li style={{marginTop:5}}>&gt; Subrogation Review and Audit.</li>
+            <li style={{marginTop:5}}>&gt; Dispute Resolution & Appraisal Services.</li>
+            <li style={{marginTop:5}}>&gt; Litigation Support.</li>
+            <li style={{marginTop:5}}>&gt; Builders Risk Services.</li>
+            <li style={{marginTop:5}}>&gt; Lode Upgrade Analysis.</li>
           </ul>
         </div>
       </div>
@@ -93,11 +114,11 @@ const HomeScreen = () => {
             code that will allow you access to the new Make An Assignment form.
           </p>
 
-          <ul style={{ marginLeft: 20 }}>
-            <li>Scan QR code</li>
-            <li>Download app</li>
-            <li>Request your 4-digit code</li>
-            <li>Enter code to use the new Make An Assignment form</li>
+          <ul style={{marginTop:20,marginBottom:20, marginLeft: 20, fontSize: 20, listStyleType:'none' }}>
+            <li>&gt; Scan QR code</li>
+            <li>&gt; Download app</li>
+            <li>&gt; Request your 4-digit code</li>
+            <li>&gt; Enter code to use the new Make An Assignment form</li>
           </ul>
 
           <p>
@@ -112,27 +133,31 @@ const HomeScreen = () => {
         </div>
       </div>
       <div className="contact-section">
-        <h2>Contact Us</h2>
+        <h2 style={{fontSize:30}}>Contact Us</h2>
         <div className="contact-options">
           <div className="contact-option">
-            <img src={email} alt="Option 1" className="option-image" />
+            <img src={email} alt="Option 1" className="option-image"  style={{height:55, width:55}}/>
             <div className="option-text">
-              <p>Email</p>
-              <a>scott@sgwarren.com</a>
+              <p>scott@sgwarren.com</p>
             </div>
           </div>
           <div className="contact-option">
-            <img src={fone} alt="Option 1" className="option-image" />
+            <img src={fone} alt="Option 1" className="option-image" style={{height:55, width:55}}/>
             <div className="option-text">
-              <p>Phone Number</p>
               <p>+440-799-9512</p>
             </div>
           </div>
           <div className="contact-option">
-            <img src={loc} alt="Option 1" className="option-image" />
-            <div className="option-text">
-              <p>Location</p>
-              <p>8700 Riverview Road. Brecksville Ohio 44141-1727</p>
+            <img
+              src={loc}
+              alt="Option 1"
+              className="option-image"
+              style={{ marginLeft: -5,height:63, width:63 }}
+            />
+            <div className="option-text" >
+              <p>Cooperate Head Quarters</p>
+              <p>8700 Riverview Road.</p>
+              <p>Brecksville Ohio. 44141-1727</p>
             </div>
           </div>
         </div>
@@ -151,6 +176,7 @@ const HomeScreen = () => {
               borderBottomWidth: 1,
               borderColor: "black",
               cursor: "pointer",
+              marginTop:5
             }}
             onClick={() => {
               navigate("/adminlogin");
@@ -159,7 +185,7 @@ const HomeScreen = () => {
             Go to Admin Login
           </p>
         </div>
-        <div className="copyright" style={{ marginTop: 0 }}>
+        <div className="copyright" style={{ marginTop: 5 }}>
           Copyright@2015. All Rights Reserved
         </div>
       </div>

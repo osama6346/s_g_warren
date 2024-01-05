@@ -2,6 +2,11 @@
   margin: 0;
   padding: 0;
 }
+body {
+  font-family: 'YourFont',sans-serif;
+  /* Replace 'YourFont' with the actual font name you want to use */
+}
+
 .homepage-container {
   display: flex;
   flex-direction: column;
@@ -12,7 +17,11 @@
 .middle-text p{
   font-size: 20px;
 }
-
+.mission{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}
+.middle-text{
+  text-align: justify;
+}
 .top-section {
   display: flex;
   justify-content: space-between;
@@ -57,13 +66,14 @@
   padding-bottom: 0px;
   box-sizing: border-box;
   width: 100%;
+  text-align: justify;
 }
 
 .signbutton,
 .loginbutton {
   background-color: #2d7672;
   color: white;
-  width: 154px;
+  width: 160px;
   height: 40px;
   font-size: 18px;
   cursor: pointer;
@@ -73,12 +83,14 @@
 .loginbutton {
   background-color: #fff;
   color: black;
-  width: 154px;
+  width: 160px;
   height: 40px;
   font-size: 18px;
   cursor: pointer;
   border-radius: 8px;
   transition: background-color 0.3s ease;
+  border-color: black;
+  border-width: 1px;
 }
 
 .signbutton:hover,
@@ -92,34 +104,41 @@
   align-items: center;
   width: 100%;
   overflow: hidden;
-  padding: 20px;
   background-color: #2d7672;
-  padding-top: 0px;
   padding-bottom: 30px;
   box-sizing: border-box;
 }
+.scottname{
+  margin-top: 15px;
+  left: 50px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-align: right;
+}
 .image-container {
   position: relative;
-  width: 90%;
-  height: 500px;
+  width: 100%;
+  height: 600px;
 }
 
 .top-left-image {
   position: absolute;
   width: 100%;
   height: 90%;
-  margin-top: 10px;
 }
 .approach {
   position: absolute;
   bottom: 0px;
   right: 20px;
+  border-radius: 10px;
   background-color: white;
   padding: 20px;
   padding-top: 3px;
   max-width: 500px;
-  box-shadow: 0 4px 50px rgba(255, 255, 255, 0.8);/* Add box shadow */
+  /* box-shadow: 0 0px 100px rgba(255, 255, 255, 0.9);Add box shadow */
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8);
   text-align: center; /* Center text */
+  border: 1px solid black; /* Set a border color */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); 
 }
 .approach h2 {
   margin-top: 0px;
@@ -153,7 +172,10 @@
   width: 60%;
 }
 .bottom-text p{
-  font-size: 17px;
+  font-size: 20px;
+}
+.bottom-text h2{
+  font-size: 30px;
 }
 .qrimage {
   width: 20%;
@@ -177,10 +199,15 @@
   align-self: center;
   padding: 20px;
   box-sizing: border-box;
+  margin-bottom: 30px;
+}
+.contact-options p{
+  font-size: 18px;
 }
 .contact-option {
   display: flex;
   align-self: center;
+  height: 55px;
 }
 .option-text {
   padding: 5px;
@@ -231,15 +258,22 @@
     margin-top: 0px;
   }
   .image-container {
-    display: none;
+    /* display: none; */
+  }
+  .approach{
+    right: 0px;
   }
   .middle-text {
-    width: 80%;
+    align-self: center;
+    width: 85%;
+    padding-right: 30px;
     margin-bottom: 20px;
+    align-items: center;
   }
   
   .middle-section {
     padding: 5px;
+    align-items: center;
   }
   .bottom-section {
     padding: 0;

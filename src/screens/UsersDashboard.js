@@ -47,6 +47,8 @@ const UserDashboard = () => {
   const [totalPages, setTotalPages] = useState(0);
   const [selectedUser, setSelectedUser] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [confirmReject, setConfirmReject] = useState(false);
+
   const [editedUser, setEditedUser] = useState({
     fullName: "",
     email: "",
@@ -123,6 +125,7 @@ const UserDashboard = () => {
       email: user.email,
       company: user.company,
       phone: user.phone,
+      status: user.status
     });
     setIsModalOpen(true);
   };
@@ -145,9 +148,9 @@ const UserDashboard = () => {
       email: editedUser.email,
       company: editedUser.company,
       phone: editedUser.phone,
+      status:editedUser.status
     });
 
-    // Close the modal
     handleModalClose();
   };
 
@@ -238,7 +241,16 @@ const UserDashboard = () => {
       });
     }
   };
-  
+
+  const handleReject = () => {
+    const isConfirmed = window.confirm('Are you sure you want to reject this user?');
+    if (isConfirmed) {
+      update(ref(database, `users/${selectedUser.id}`), {
+        status: "rejected",
+      });
+      handleModalClose();
+    }
+  };
 
   return (
     <div className="dash-container">
@@ -371,63 +383,78 @@ const UserDashboard = () => {
         </div>
       )}
       <Modal
-        isOpen={isModalOpen}
-        onRequestClose={handleModalClose}
-        contentLabel="Edit User"
-        ariaHideApp={false} // This is to prevent an accessibility issue
-      >
-        <div className="modal-container">
-          <h2 style={{ marginBottom: 10 }}>Edit User</h2>
-          <label>
-            Name:
-            <input
-              type="text"
-              value={editedUser.fullName}
-              onChange={(e) =>
-                setEditedUser({ ...editedUser, fullName: e.target.value })
-              }
-            />
-          </label>
-          <label>
-            Email:
-            <input
-              type="email"
-              value={editedUser.email}
-              onChange={(e) =>
-                setEditedUser({ ...editedUser, email: e.target.value })
-              }
-            />
-          </label>
-          <label>
-            Company:
-            <input
-              type="text"
-              value={editedUser.company}
-              onChange={(e) =>
-                setEditedUser({ ...editedUser, company: e.target.value })
-              }
-            />
-          </label>
-          <label>
-            Phone:
-            <input
-              type="tel"
-              value={editedUser.phone}
-              onChange={(e) =>
-                setEditedUser({ ...editedUser, phone: e.target.value })
-              }
-            />
-          </label>
-          <div className="modal-buttons">
-            <button className="save-button" onClick={handleSaveChanges}>
-              Save Changes
+      isOpen={isModalOpen}
+      onRequestClose={handleModalClose}
+      contentLabel="Edit User"
+      ariaHideApp={false} // This is to prevent an accessibility issue
+    >
+      <div className="modal-container">
+        <h2 style={{ marginBottom: 10 }}>Edit User</h2>
+        <label>
+          Name:
+          <input
+            type="text"
+            value={editedUser.fullName}
+            onChange={(e) =>
+              setEditedUser({ ...editedUser, fullName: e.target.value })
+            }
+          />
+        </label>
+        <label>
+          Email:
+          <input
+            type="email"
+            value={editedUser.email}
+            onChange={(e) =>
+              setEditedUser({ ...editedUser, email: e.target.value })
+            }
+          />
+        </label>
+        <label>
+          Company:
+          <input
+            type="text"
+            value={editedUser.company}
+            onChange={(e) =>
+              setEditedUser({ ...editedUser, company: e.target.value })
+            }
+          />
+        </label>
+        <label>
+          Phone:
+          <input
+            type="tel"
+            value={editedUser.phone}
+            onChange={(e) =>
+              setEditedUser({ ...editedUser, phone: e.target.value })
+            }
+          />
+        </label>
+        
+        <div className="modal-buttons">
+        {editedUser.status == 'approved' && (
+          <div>
+            <button className="reject-button" onClick={handleReject}>
+              Reject
             </button>
-            <button className="cancel-button" onClick={handleModalClose}>
-              Cancel
-            </button>
+            {/* {confirmReject && (
+              <div className="confirmation-modal">
+                <p>Are you sure you want to reject this user?</p>
+                <button onClick={handleReject}>Yes</button>
+                <button onClick={() => setConfirmReject(false)}>No</button>
+              </div>
+            )} */}
           </div>
+        )}
+          <button className="save-button" onClick={handleSaveChanges}>
+            Save 
+          </button>
+          <button className="cancel-button" onClick={handleModalClose}>
+            Cancel
+          </button>
         </div>
-      </Modal>
+      </div>
+    </Modal>
     </div>
   );
 };
