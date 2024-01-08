@@ -62,33 +62,41 @@ const Login = ({ setIsUserLoggedIn }) => {
     }
   };
 
+  let matchingUser = null; // Define matchingUser outside the try block
+
   const handleLogin = async () => {
     const code = digit1 + digit2 + digit3 + digit4;
-
+  
     try {
-      setLoggingIn(true); // Set login status to true when starting the login process
-
+      setLoggingIn(true);
+  
       const usersRef = ref(database, "users");
       const usersSnapshot = await get(usersRef);
-
+  
       const usersArray = Object.entries(usersSnapshot.val()).map(
         ([key, value]) => ({
           id: key,
           ...value,
         })
       );
-
-      const matchingUser = usersArray.find(
+  
+      matchingUser = usersArray.find(
         (user) => user.verificationCode === parseInt(code)
       );
-
+  
       if (matchingUser) {
+        if (matchingUser.status === "rejected") {
+          setInvalidCode(true);
+          setLoggingIn(false);
+          return; // Stop further execution
+        }
+  
         localStorage.setItem("code", matchingUser.verificationCode);
         localStorage.setItem("name", matchingUser.fullName);
         localStorage.setItem("email", matchingUser.email);
         localStorage.setItem("company", matchingUser.company);
         localStorage.setItem("phone", matchingUser.phone);
-
+  
         localStorage.setItem("isUserLoggedIn", "true");
         navigate("/form");
       } else {
@@ -97,9 +105,10 @@ const Login = ({ setIsUserLoggedIn }) => {
     } catch (error) {
       console.error("Error checking code:", error.message);
     } finally {
-      setLoggingIn(false); // Set login status back to false after the login process
+      setLoggingIn(false);
     }
   };
+  
 
   return (
     <div className="container">
@@ -173,9 +182,11 @@ const Login = ({ setIsUserLoggedIn }) => {
               <button className="login" onClick={handleLogin}>
                 {loggingIn ? "Logging In..." : "Login"}
               </button>
-              {invalidCode && (
+              {invalidCode && !loggingIn && (
                 <p style={{ color: "red", margin: 0, padding: 0 }}>
-                  Invalid code. Please try again.
+                  {matchingUser && matchingUser.status == "rejected"
+                    ? "Error: You are not allowed to login."
+                    : "Invalid code. Please try again."}
                 </p>
               )}
             </div>

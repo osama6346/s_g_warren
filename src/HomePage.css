@@ -129,7 +129,7 @@ body {
   position: absolute;
   bottom: 0px;
   right: 20px;
-  border-radius: 10px;
+  border-radius: 20px;
   background-color: white;
   padding: 20px;
   padding-top: 3px;
@@ -284,5 +284,11 @@ body {
     width: 100px;
     height: 40px;
     font-size: 18px;
+  }
+  .image-container{
+    height: 500px;
+  }
+  .approach{
+    padding: 10px;
   }
 }

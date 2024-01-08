@@ -155,7 +155,7 @@ const HomeScreen = () => {
               style={{ marginLeft: -5,height:63, width:63 }}
             />
             <div className="option-text" >
-              <p>Cooperate Head Quarters</p>
+              <p>Corporate Head Quarters</p>
               <p>8700 Riverview Road.</p>
               <p>Brecksville Ohio. 44141-1727</p>
             </div>
