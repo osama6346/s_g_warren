@@ -238,6 +238,9 @@ body {
   .contact-section {
     margin-bottom: 80px;
   }
+  .top-section {
+    height: 10vh;
+  }
   .signbutton,
   .loginbutton {
     padding: 0px;
@@ -258,6 +261,9 @@ body {
     height: 40px;
     font-size: 18px;
     border-radius: 15px;
+  }
+  .top-section {
+    height: 15vh;
   }
 }
 
