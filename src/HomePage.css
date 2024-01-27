@@ -26,11 +26,11 @@ body {
 }
 .top-section {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
-  width: 95%;
+  width: 100%;
   padding: 20px;
-  height: 10vh;
+  height: 18vh;
 }
 
 .logo {
@@ -196,7 +196,7 @@ body {
   display: flex;
   gap: 10px;
   width: 90%;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-self: center;
   padding: 20px;
   box-sizing: border-box;
@@ -237,6 +237,27 @@ body {
 @media (max-width: 450px) {
   .contact-section {
     margin-bottom: 80px;
+  }
+  .signbutton,
+  .loginbutton {
+    padding: 0px;
+    width: 70px;
+    height: 30px;
+    font-size: 12px;
+    border-radius: 10px;
+  }
+  .logoimage {
+    width: 150px;
+    align-self: flex-start;
+  }
+}
+@media (min-width: 451px) and (max-width: 768px) {
+  .signbutton,
+  .loginbutton {
+    width: 100px;
+    height: 40px;
+    font-size: 18px;
+    border-radius: 15px;
   }
 }
 
@@ -291,12 +312,7 @@ body {
     padding: 0;
     align-items: center;
   }
-  .signbutton,
-  .loginbutton {
-    width: 100px;
-    height: 40px;
-    font-size: 18px;
-  }
+
   .image-container {
     height: 500px;
   }
