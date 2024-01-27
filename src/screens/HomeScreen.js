@@ -58,7 +58,7 @@ const HomeScreen = () => {
         </h1>
         <div className="middle-text">
           <p style={{ marginTop: 10 }}></p>
-          <h2>Welcome to S.G. Warren & Assoc.</h2>
+          <h2 className="main-heading">Welcome to S.G. Warren & Assoc.</h2>
           <p style={{ marginTop: 15 }}></p>
           <p>
             S.G. Warren & Assoc. is a national consulting firm specializing in
@@ -108,7 +108,7 @@ const HomeScreen = () => {
           <h2 style={{ marginBottom: 10 }}>
             Scan The QR Code to get access our app!!
           </h2>
-          <p>
+          <p style={{}}>
             To get started, scan the QR code to be taken directly to our new
             S.G.Warren & Assoc. app. You will then be assigned a unique 4-digit
             code that will allow you access to the new Make An Assignment form.

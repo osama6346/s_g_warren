@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 body {
   font-family: 'YourFont',sans-serif;
@@ -164,7 +165,7 @@ body {
   padding-left: 30px;
   padding-bottom: 20px;
   padding-top: 10px;
-  width: 85%;
+  width: 90%;
 }
 .bottom-text {
   padding: 50px;
@@ -178,7 +179,7 @@ body {
   font-size: 30px;
 }
 .qrimage {
-  width: 20%;
+  width: 30%;
   padding: 40px;
 }
 .contact-section {
@@ -189,6 +190,7 @@ body {
   width: 100%;
   flex-direction: column;
   box-sizing: border-box;
+  margin-bottom: 20px;
 }
 
 .contact-options {
@@ -233,11 +235,20 @@ body {
   cursor: pointer;
 }
 
+@media (max-width: 450px) {
+  .contact-section{
+    margin-bottom: 80px;
+  }
+}
+
 @media (max-width: 768px) {
   .contact-option {
     flex-direction: row;
     align-self: flex-start;
   }
+  .option-text{
+  }
+  
   .contact-options {
     justify-content: space-between;
     flex-direction: column;
@@ -246,13 +257,16 @@ body {
   .bottom-section {
     flex-direction: column;
     box-sizing: border-box;
+    justify-content: center;
   }
   .bottom-text {
-    width: 70%;
+    width: 80%;
     margin-bottom: 0%;
+    padding: 0px;
+    padding-top: 30px;
   }
   .qrimage {
-    width: 100%;
+    width: 90%;
     display: flex;
     justify-content: center;
     margin-top: 0px;
@@ -260,12 +274,15 @@ body {
   .image-container {
     /* display: none; */
   }
+  .main-heading{
+    text-align: left;
+  }
   .approach{
     right: 0px;
   }
   .middle-text {
     align-self: center;
-    width: 85%;
+    width: 95%;
     padding-right: 30px;
     margin-bottom: 20px;
     align-items: center;
