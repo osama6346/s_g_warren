@@ -82,7 +82,14 @@ const Register = () => {
             <div className="registertextcontainer">
               <h2 className="registertext">Register</h2>
               <div className="logintextdiv">
-                <p style={{ color: "#2d7672", cursor:'pointer' }} onClick={()=>{navigate("/Login")}}>Login</p>
+                <p
+                  style={{ color: "#2d7672", cursor: "pointer" }}
+                  onClick={() => {
+                    navigate("/Login");
+                  }}
+                >
+                  Login
+                </p>
                 <p className="alreadytext">Already Have Account?</p>
               </div>
             </div>
@@ -124,10 +131,7 @@ const Register = () => {
       <div className="right">
         <div className="inside-right">
           <div className="text">
-            <h3 className="rightheading">
-             Provide your details to Register!
-            </h3>
-            
+            <h3 className="rightheading">Provide your details to Register!</h3>
           </div>
           <img className="house" src={house} alt="Your Image" />
         </div>

@@ -4,9 +4,9 @@ import "../AdminHome.css"; // Import your CSS for styling
 import DashboardComponent from "./Dashboard";
 import FormDashboard from "./FormDashboard";
 import UserDashboard from "./UsersDashboard";
-import dashboard from '../assets/Dashboard.png';
-import form from '../assets/form.png';
-import user from '../assets/Users.png';
+import dashboard from "../assets/Dashboard.png";
+import form from "../assets/form.png";
+import user from "../assets/Users.png";
 
 const Adminhome = () => {
   const [selectedOption, setSelectedOption] = useState("users");
@@ -19,8 +19,6 @@ const Adminhome = () => {
     <div className="container">
       <div className="sidebar">
         <div className="sidebarcontainer">
-          
-          
           <div
             className={`sidebar-option ${
               selectedOption === "users" ? "active" : ""

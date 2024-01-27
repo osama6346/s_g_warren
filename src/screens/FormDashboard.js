@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import "../Dashboard.css";
 import person from "../assets/person.png";
-import { FaSearch , FaFilter} from "react-icons/fa";
+import { FaSearch, FaFilter } from "react-icons/fa";
 import dashicon1 from "../assets/dashicon1.png";
 import dashicon2 from "../assets/dashicon2.png";
 import dashicon3 from "../assets/dashicon3.png";
-import filter from '../assets/icon_filter.png'
+import filter from "../assets/icon_filter.png";
 const Dropdown = ({ options, onSelect }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [itemsToDisplay, setItemsToDisplay] = useState([]);
@@ -324,11 +324,11 @@ const FormDashboard = () => {
         <div className="insidecontainer">
           <h3>Form Submission</h3>
           <div className="insideinput">
-          <div className="below-input">
-            <FaSearch style={{ marginLeft: 3 }} size={20} />
-            <input type="text" placeholder="Search..." />
-          </div>
-          <FaFilter style={{margin:10}} size={20}/>
+            <div className="below-input">
+              <FaSearch style={{ marginLeft: 3 }} size={20} />
+              <input type="text" placeholder="Search..." />
+            </div>
+            <FaFilter style={{ margin: 10 }} size={20} />
           </div>
           <div className="chartdiv">
             <div className="formstable">

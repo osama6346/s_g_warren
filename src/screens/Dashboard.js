@@ -41,35 +41,35 @@ const Dropdown = ({ options, onSelect }) => {
 };
 
 const DashboardComponent = () => {
-    const [tableData, setTableData] = useState([
-        {
-          id: 1,
-          username: "User1",
-          email: "user1@example.com",
-          status: "Submit",
-        },
-        {
-          id: 2,
-          username: "User2",
-          email: "user2@example.com",
-          status: "Submit",
-        },
-        
-        {
-          id: 3,
-          username: "User2",
-          email: "user2@example.com",
-          status: "Submit",
-        },
-        
-        {
-          id: 4,
-          username: "User2",
-          email: "user2@example.com",
-          status: "Submit",
-        }
-        // Add more data as needed
-      ]);
+  const [tableData, setTableData] = useState([
+    {
+      id: 1,
+      username: "User1",
+      email: "user1@example.com",
+      status: "Submit",
+    },
+    {
+      id: 2,
+      username: "User2",
+      email: "user2@example.com",
+      status: "Submit",
+    },
+
+    {
+      id: 3,
+      username: "User2",
+      email: "user2@example.com",
+      status: "Submit",
+    },
+
+    {
+      id: 4,
+      username: "User2",
+      email: "user2@example.com",
+      status: "Submit",
+    },
+    // Add more data as needed
+  ]);
   const handleDropdownSelect = (selectedOption) => {
     // Handle the selected option here
     console.log("Selected Option: " + selectedOption);
@@ -129,30 +129,29 @@ const DashboardComponent = () => {
           <div className="formdiv">
             <p className="statstext">Latest Form Submission</p>
             <div className="formstable">
-          <table>
-            <thead>
-              <tr>
-                <th>Username</th>
-                <th>Email</th>
-                <th>Status</th>
-                <th>Actions</th>
-              </tr>
-            </thead>
-            <tbody>
-              {tableData.map((row) => (
-                <tr key={row.id}>
-                  <td>{row.username}</td>
-                  <td>{row.email}</td>
-                  <td>{row.status}</td>
-                  <td>
-                    {/* Add actions buttons here, e.g., edit, delete */}
-                    :
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {tableData.map((row) => (
+                    <tr key={row.id}>
+                      <td>{row.username}</td>
+                      <td>{row.email}</td>
+                      <td>{row.status}</td>
+                      <td>
+                        {/* Add actions buttons here, e.g., edit, delete */}:
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </div>

@@ -40,13 +40,15 @@ const HomeScreen = () => {
         <div className="image-container">
           <img src={newhome} alt="House" className="top-left-image " />
           <div className="approach">
-            <h2 className="mission" style={{marginTop:5}}>OUR MISSION</h2>
+            <h2 className="mission" style={{ marginTop: 5 }}>
+              OUR MISSION
+            </h2>
             <p className="approachtext">
               "...to provide the most reliable property consulting services to
               the insurance market and appointed counsel while maintaining the
               highest level of integrity possible..."
             </p>
-            <h3 className="scottname">           Scott G. Warren</h3>
+            <h3 className="scottname"> Scott G. Warren</h3>
           </div>
         </div>
         <p style={{ marginTop: 15 }}></p>
@@ -89,17 +91,21 @@ const HomeScreen = () => {
               marginLeft: 25,
               fontSize: 20,
               listStyleType: "none",
-              textAlign:'left',
+              textAlign: "left",
             }}
           >
             <li>&gt; Vendor Support on Property Loss Estimating.</li>
-            <li style={{marginTop:5}}>&gt; JOB SITE / Project Monitoring.</li>
-            <li style={{marginTop:5}}>&gt; Mitigation Review and Audit.</li>
-            <li style={{marginTop:5}}>&gt; Subrogation Review and Audit.</li>
-            <li style={{marginTop:5}}>&gt; Dispute Resolution & Appraisal Services.</li>
-            <li style={{marginTop:5}}>&gt; Litigation Support.</li>
-            <li style={{marginTop:5}}>&gt; Builders Risk Services.</li>
-            <li style={{marginTop:5}}>&gt; Lode Upgrade Analysis.</li>
+            <li style={{ marginTop: 5 }}>
+              &gt; JOB SITE / Project Monitoring.
+            </li>
+            <li style={{ marginTop: 5 }}>&gt; Mitigation Review and Audit.</li>
+            <li style={{ marginTop: 5 }}>&gt; Subrogation Review and Audit.</li>
+            <li style={{ marginTop: 5 }}>
+              &gt; Dispute Resolution & Appraisal Services.
+            </li>
+            <li style={{ marginTop: 5 }}>&gt; Litigation Support.</li>
+            <li style={{ marginTop: 5 }}>&gt; Builders Risk Services.</li>
+            <li style={{ marginTop: 5 }}>&gt; Lode Upgrade Analysis.</li>
           </ul>
         </div>
       </div>
@@ -114,7 +120,15 @@ const HomeScreen = () => {
             code that will allow you access to the new Make An Assignment form.
           </p>
 
-          <ul style={{marginTop:20,marginBottom:20, marginLeft: 20, fontSize: 20, listStyleType:'none' }}>
+          <ul
+            style={{
+              marginTop: 20,
+              marginBottom: 20,
+              marginLeft: 20,
+              fontSize: 20,
+              listStyleType: "none",
+            }}
+          >
             <li>&gt; Scan QR code</li>
             <li>&gt; Download app</li>
             <li>&gt; Request your 4-digit code</li>
@@ -133,16 +147,26 @@ const HomeScreen = () => {
         </div>
       </div>
       <div className="contact-section">
-        <h2 style={{fontSize:30}}>Contact Us</h2>
+        <h2 style={{ fontSize: 30 }}>Contact Us</h2>
         <div className="contact-options">
           <div className="contact-option">
-            <img src={email} alt="Option 1" className="option-image"  style={{height:55, width:55}}/>
+            <img
+              src={email}
+              alt="Option 1"
+              className="option-image"
+              style={{ height: 55, width: 55 }}
+            />
             <div className="option-text">
               <p>scott@sgwarren.com</p>
             </div>
           </div>
           <div className="contact-option">
-            <img src={fone} alt="Option 1" className="option-image" style={{height:55, width:55}}/>
+            <img
+              src={fone}
+              alt="Option 1"
+              className="option-image"
+              style={{ height: 55, width: 55 }}
+            />
             <div className="option-text">
               <p>+440-799-9512</p>
             </div>
@@ -152,9 +176,9 @@ const HomeScreen = () => {
               src={loc}
               alt="Option 1"
               className="option-image"
-              style={{ marginLeft: -5,height:63, width:63 }}
+              style={{ marginLeft: -5, height: 63, width: 63 }}
             />
-            <div className="option-text" >
+            <div className="option-text">
               <p>Corporate Head Quarters</p>
               <p>8700 Riverview Road.</p>
               <p>Brecksville Ohio. 44141-1727</p>
@@ -176,7 +200,7 @@ const HomeScreen = () => {
               borderBottomWidth: 1,
               borderColor: "black",
               cursor: "pointer",
-              marginTop:5
+              marginTop: 5,
             }}
             onClick={() => {
               navigate("/adminlogin");

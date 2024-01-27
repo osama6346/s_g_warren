@@ -66,37 +66,37 @@ const Login = ({ setIsUserLoggedIn }) => {
 
   const handleLogin = async () => {
     const code = digit1 + digit2 + digit3 + digit4;
-  
+
     try {
       setLoggingIn(true);
-  
+
       const usersRef = ref(database, "users");
       const usersSnapshot = await get(usersRef);
-  
+
       const usersArray = Object.entries(usersSnapshot.val()).map(
         ([key, value]) => ({
           id: key,
           ...value,
         })
       );
-  
+
       matchingUser = usersArray.find(
         (user) => user.verificationCode === parseInt(code)
       );
-  
+
       if (matchingUser) {
         if (matchingUser.status === "rejected") {
           setInvalidCode(true);
           setLoggingIn(false);
           return; // Stop further execution
         }
-  
+
         localStorage.setItem("code", matchingUser.verificationCode);
         localStorage.setItem("name", matchingUser.fullName);
         localStorage.setItem("email", matchingUser.email);
         localStorage.setItem("company", matchingUser.company);
         localStorage.setItem("phone", matchingUser.phone);
-  
+
         localStorage.setItem("isUserLoggedIn", "true");
         navigate("/form");
       } else {
@@ -108,7 +108,6 @@ const Login = ({ setIsUserLoggedIn }) => {
       setLoggingIn(false);
     }
   };
-  
 
   return (
     <div className="container">
@@ -197,7 +196,6 @@ const Login = ({ setIsUserLoggedIn }) => {
         <div className="inside-right">
           <div className="text">
             <h3 className="rightheading">Login to continue to our website!</h3>
-            
           </div>
           <img className="house" src={house} alt="Your Image" />
         </div>

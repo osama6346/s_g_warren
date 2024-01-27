@@ -125,7 +125,7 @@ const UserDashboard = () => {
       email: user.email,
       company: user.company,
       phone: user.phone,
-      status: user.status
+      status: user.status,
     });
     setIsModalOpen(true);
   };
@@ -148,7 +148,7 @@ const UserDashboard = () => {
       email: editedUser.email,
       company: editedUser.company,
       phone: editedUser.phone,
-      status:editedUser.status
+      status: editedUser.status,
     });
 
     handleModalClose();
@@ -164,7 +164,7 @@ const UserDashboard = () => {
     const isConfirmed = window.confirm(
       `Are you sure you want to approve ${selectedUser.fullName}?`
     );
-  
+
     // If the user confirms, proceed with the approval
     if (isConfirmed) {
       const templateParams = {
@@ -172,7 +172,7 @@ const UserDashboard = () => {
         message: `Your Login code is ${selectedUser.verificationCode}. Use this code to login to the website`,
         // Add any other parameters needed for your email template
       };
-  
+
       try {
         await emailjs.send(
           "service_c75zadc",
@@ -180,23 +180,23 @@ const UserDashboard = () => {
           templateParams,
           "R00wYyZX6b2ZVrp4q"
         );
-  
+
         // Update the user status to "approved"
         await update(ref(database, `users/${selectedUser.id}`), {
           status: "approved",
         });
-  
+
         // Fetch updated users from Firebase
         const usersRef = ref(database, "users");
         const usersSnapshot = await get(usersRef);
-  
+
         const usersArray = Object.entries(usersSnapshot.val()).map(
           ([key, value]) => ({
             id: key,
             ...value,
           })
         );
-  
+
         // Update the state with the new user data
         setTableData(usersArray);
       } catch (error) {
@@ -204,28 +204,27 @@ const UserDashboard = () => {
         // Handle the error as needed
       }
     }
-  
+
     // Close the popup
     setIsPopupOpen(false);
   };
-  
 
   const handlePopupReject = () => {
     // Show a confirmation dialog
     const isConfirmed = window.confirm(
       `Are you sure you want to reject ${selectedUser.fullName}?`
     );
-  
+
     // If the user confirms, proceed with the rejection
     if (isConfirmed) {
       // Close the popup
       setIsPopupOpen(false);
-  
+
       // Update the user status to "rejected"
       update(ref(database, `users/${selectedUser.id}`), {
         status: "rejected",
       });
-  
+
       // Fetch updated users from Firebase
       const usersRef = ref(database, "users");
       get(usersRef).then((usersSnapshot) => {
@@ -235,7 +234,7 @@ const UserDashboard = () => {
             ...value,
           })
         );
-  
+
         // Update the state with the new user data
         setTableData(usersArray);
       });
@@ -243,7 +242,9 @@ const UserDashboard = () => {
   };
 
   const handleReject = () => {
-    const isConfirmed = window.confirm('Are you sure you want to reject this user?');
+    const isConfirmed = window.confirm(
+      "Are you sure you want to reject this user?"
+    );
     if (isConfirmed) {
       update(ref(database, `users/${selectedUser.id}`), {
         status: "rejected",
@@ -254,9 +255,7 @@ const UserDashboard = () => {
 
   return (
     <div className="dash-container">
-      <div className="search-bar">
-        
-      </div>
+      <div className="search-bar"></div>
       <div className="dashboardcontainer">
         <div className="insidecontainer">
           <h2>Users</h2>
@@ -383,78 +382,78 @@ const UserDashboard = () => {
         </div>
       )}
       <Modal
-      isOpen={isModalOpen}
-      onRequestClose={handleModalClose}
-      contentLabel="Edit User"
-      ariaHideApp={false} // This is to prevent an accessibility issue
-    >
-      <div className="modal-container">
-        <h2 style={{ marginBottom: 10 }}>Edit User</h2>
-        <label>
-          Name:
-          <input
-            type="text"
-            value={editedUser.fullName}
-            onChange={(e) =>
-              setEditedUser({ ...editedUser, fullName: e.target.value })
-            }
-          />
-        </label>
-        <label>
-          Email:
-          <input
-            type="email"
-            value={editedUser.email}
-            onChange={(e) =>
-              setEditedUser({ ...editedUser, email: e.target.value })
-            }
-          />
-        </label>
-        <label>
-          Company:
-          <input
-            type="text"
-            value={editedUser.company}
-            onChange={(e) =>
-              setEditedUser({ ...editedUser, company: e.target.value })
-            }
-          />
-        </label>
-        <label>
-          Phone:
-          <input
-            type="tel"
-            value={editedUser.phone}
-            onChange={(e) =>
-              setEditedUser({ ...editedUser, phone: e.target.value })
-            }
-          />
-        </label>
-        
-        <div className="modal-buttons">
-        {editedUser.status == 'approved' && (
-          <div>
-            <button className="reject-button" onClick={handleReject}>
-              Reject
-            </button>
-            {/* {confirmReject && (
+        isOpen={isModalOpen}
+        onRequestClose={handleModalClose}
+        contentLabel="Edit User"
+        ariaHideApp={false} // This is to prevent an accessibility issue
+      >
+        <div className="modal-container">
+          <h2 style={{ marginBottom: 10 }}>Edit User</h2>
+          <label>
+            Name:
+            <input
+              type="text"
+              value={editedUser.fullName}
+              onChange={(e) =>
+                setEditedUser({ ...editedUser, fullName: e.target.value })
+              }
+            />
+          </label>
+          <label>
+            Email:
+            <input
+              type="email"
+              value={editedUser.email}
+              onChange={(e) =>
+                setEditedUser({ ...editedUser, email: e.target.value })
+              }
+            />
+          </label>
+          <label>
+            Company:
+            <input
+              type="text"
+              value={editedUser.company}
+              onChange={(e) =>
+                setEditedUser({ ...editedUser, company: e.target.value })
+              }
+            />
+          </label>
+          <label>
+            Phone:
+            <input
+              type="tel"
+              value={editedUser.phone}
+              onChange={(e) =>
+                setEditedUser({ ...editedUser, phone: e.target.value })
+              }
+            />
+          </label>
+
+          <div className="modal-buttons">
+            {editedUser.status == "approved" && (
+              <div>
+                <button className="reject-button" onClick={handleReject}>
+                  Reject
+                </button>
+                {/* {confirmReject && (
               <div className="confirmation-modal">
                 <p>Are you sure you want to reject this user?</p>
                 <button onClick={handleReject}>Yes</button>
                 <button onClick={() => setConfirmReject(false)}>No</button>
               </div>
             )} */}
+              </div>
+            )}
+            <button className="save-button" onClick={handleSaveChanges}>
+              Save
+            </button>
+            <button className="cancel-button" onClick={handleModalClose}>
+              Cancel
+            </button>
           </div>
-        )}
-          <button className="save-button" onClick={handleSaveChanges}>
-            Save 
-          </button>
-          <button className="cancel-button" onClick={handleModalClose}>
-            Cancel
-          </button>
         </div>
-      </div>
-    </Modal>
+      </Modal>
     </div>
   );
 };

@@ -1,88 +1,87 @@
 /* YourComponent.css */
 
 .container {
-    display: flex;
-    height: 100vh;
-    box-sizing: border-box;
+  display: flex;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.sidebar {
+  height: 100vh;
+  width: 200px;
+  background-color: #085e59;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  transition: width 0.3s ease; /* Smooth transition for width change */
+  box-sizing: border-box;
+}
+
+.sidebar-option.active {
+  background-color: #fff;
+  color: #1a524e;
+}
+
+.sidebar.closed {
+  width: 0;
+}
+
+.sidebar-option {
+  display: flex;
+  align-items: center;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 5px;
+}
+
+.sidebarcontainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 120px;
+}
+
+.menuoption {
+  margin-left: 8px;
+}
+
+.sidebar-option:hover {
+  background-color: #1a524e;
+}
+
+.sideimage {
+  color: white;
+}
+
+.outlet-view {
+  flex: 1;
+  padding: 0px;
+  overflow-y: auto;
+}
+
+/* Add a media query for small screens */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
   }
-  
   .sidebar {
-    height: 100vh;
-    width: 200px;
-    background-color: #085e59;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    transition: width 0.3s ease; /* Smooth transition for width change */
-    box-sizing: border-box;
-  }
-  
-  .sidebar-option.active {
-    background-color: #fff;
-    color: #1a524e;
-  }
-  
-  .sidebar.closed {
-    width: 0;
-  }
-  
-  .sidebar-option {
-    display: flex;
-    align-items: center;
-    color: white;
-    padding: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    border-radius: 5px;
-  }
-  
-  .sidebarcontainer {
-    display: flex;
-    flex-direction: column;
     width: 100%;
-    margin-top: 120px;
+    display: flex;
+    height: auto;
   }
-  
-  .menuoption {
-    margin-left: 8px;
-  }
-  
-  .sidebar-option:hover {
-    background-color: #1a524e;
-  }
-  
-  .sideimage {
-    color: white;
-  }
-  
-  .outlet-view {
-    flex: 1;
-    padding: 0px;
-    overflow-y: auto;
-  }
-  
-  /* Add a media query for small screens */
-  @media (max-width: 768px) {
-    .container{
-        flex-direction: column;
-    }
-    .sidebar {
-      width: 100%;
-      display: flex;
-      height: auto;
-    }
-  .sidebarcontainer{
+  .sidebarcontainer {
     margin-top: 0;
     flex-direction: row;
   }
-    .sidebar-option {
-      width: 100%;
-    }
-  
-    .outlet-view {
-      flex: 1;
-      width: 100%;
-    }
+  .sidebar-option {
+    width: 100%;
   }
-  
+
+  .outlet-view {
+    flex: 1;
+    width: 100%;
+  }
+}

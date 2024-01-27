@@ -64,9 +64,8 @@ const ResetCode = ({ setIsAdminLoggedIn }) => {
         <div className="inside-right">
           <div className="text">
             <h3 className="rightheading">
-             Provide your credentials to continue to Dashboard.
+              Provide your credentials to continue to Dashboard.
             </h3>
-           
           </div>
           <img className="house" src={house} alt="Your Image" />
         </div>

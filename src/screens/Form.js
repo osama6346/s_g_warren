@@ -434,22 +434,21 @@ const FormDashboard = () => {
               <p>Scope of Service Required</p>
 
               <textarea
-  name="scopeofservice"
-  value={formData.scopeofservice}
-  onChange={handleInputChange}
-  placeholder="Scope of service required"
-  rows={5}
-  style={{
-    width: "70%",
-    border: "none",
-    outline: "none",
-    padding: "12px",
-    boxShadow: "0 0 20px rgba(0, 0, 0, 0.1)",
-    marginTop: "2px",
-    resize: "vertical", // optional: allows vertical resizing
-  }}
-/>
-
+                name="scopeofservice"
+                value={formData.scopeofservice}
+                onChange={handleInputChange}
+                placeholder="Scope of service required"
+                rows={5}
+                style={{
+                  width: "70%",
+                  border: "none",
+                  outline: "none",
+                  padding: "12px",
+                  boxShadow: "0 0 20px rgba(0, 0, 0, 0.1)",
+                  marginTop: "2px",
+                  resize: "vertical", // optional: allows vertical resizing
+                }}
+              />
             </div>
 
             <button type="submit" className="submit-button" onClick={openPopup}>
