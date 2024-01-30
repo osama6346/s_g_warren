@@ -44,11 +44,11 @@ const HomeScreen = () => {
               OUR MISSION
             </h2>
             <p className="approachtext">
-              "...to provide the most reliable property consulting services to
-              the insurance market and appointed counsel while maintaining the
-              highest level of integrity possible..."
+              "...Delivering clients the most trustworthy and defensible
+              consulting services supported by real-world market insights, all
+              while upholding the highest standards of integrity..."
             </p>
-            <h3 className="scottname"> Scott G. Warren</h3>
+            <h3 className="scottname">Scott G. Warren</h3>
           </div>
         </div>
         <p style={{ marginTop: 15 }}></p>
