@@ -44,9 +44,20 @@ button.login {
 .house {
   width: 60%;
 }
-@media (max-width: 768px) {
+@media (max-width: 968px) {
   .insidelogin input {
     width: 50px;
     height: 50px;
+  }
+  .insidelogin{
+    width: 90%;
+  }
+  .logininputs{
+    justify-content: space-between;
+    margin-top: 10px;
+    gap: 10px;
+  }
+  .insidelogin input{
+    margin: 0px;
   }
 }

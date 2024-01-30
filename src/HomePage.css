@@ -236,7 +236,11 @@ body {
 
 @media (max-width: 450px) {
   .contact-section {
-    margin-bottom: 80px;
+    margin-bottom: 50px;
+  }
+  .contact-options{
+    padding-left: 0px;
+    width: 110%;
   }
   .top-section {
     height: 10vh;
@@ -272,9 +276,8 @@ body {
     flex-direction: row;
     align-self: flex-start;
   }
-
+  
   .contact-options {
-    justify-content: space-between;
     flex-direction: column;
     align-self: flex-start;
   }

@@ -139,7 +139,7 @@ const Login = ({ setIsUserLoggedIn }) => {
                 margin: 0,
                 padding: 0,
                 fontSize: 12,
-                alignSelf: "flex-start",
+                alignSelf: "center",
                 marginTop: 10,
                 marginLeft: 15,
               }}

@@ -178,7 +178,7 @@ const HomeScreen = () => {
               className="option-image"
               style={{ marginLeft: -5, height: 63, width: 63 }}
             />
-            <div className="option-text">
+            <div className="option-text address">
               <p>Corporate Head Quarters</p>
               <p>8700 Riverview Road.</p>
               <p>Brecksville Ohio. 44141-1727</p>
