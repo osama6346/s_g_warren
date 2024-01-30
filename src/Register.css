@@ -121,6 +121,13 @@ img {
 .house {
   width: 60%;
 }
+
+@media (max-width: 450px) {
+  .insideregister{
+    width: 70%;
+  }
+}
+
 @media (max-width: 768px) {
   .right {
     display: none;
@@ -128,4 +135,6 @@ img {
   .left {
     width: 100%;
   }
+  
 }
+
