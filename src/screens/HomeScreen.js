@@ -88,24 +88,21 @@ const HomeScreen = () => {
           <ul
             style={{
               marginTop: 30,
-              marginLeft: 25,
+              marginLeft: 30,
               fontSize: 20,
-              listStyleType: "none",
               textAlign: "left",
             }}
           >
-            <li>&gt; Vendor Support on Property Loss Estimating.</li>
+            <li>Vendor Support on Property Loss Estimating.</li>
+            <li style={{ marginTop: 5 }}>JOB SITE / Project Monitoring.</li>
+            <li style={{ marginTop: 5 }}>Mitigation Review and Audit.</li>
+            <li style={{ marginTop: 5 }}>Subrogation Review and Audit.</li>
             <li style={{ marginTop: 5 }}>
-              &gt; JOB SITE / Project Monitoring.
+              Dispute Resolution & Appraisal Services.
             </li>
-            <li style={{ marginTop: 5 }}>&gt; Mitigation Review and Audit.</li>
-            <li style={{ marginTop: 5 }}>&gt; Subrogation Review and Audit.</li>
-            <li style={{ marginTop: 5 }}>
-              &gt; Dispute Resolution & Appraisal Services.
-            </li>
-            <li style={{ marginTop: 5 }}>&gt; Litigation Support.</li>
-            <li style={{ marginTop: 5 }}>&gt; Builders Risk Services.</li>
-            <li style={{ marginTop: 5 }}>&gt; Lode Upgrade Analysis.</li>
+            <li style={{ marginTop: 5 }}>Litigation Support.</li>
+            <li style={{ marginTop: 5 }}>Builders Risk Services.</li>
+            <li style={{ marginTop: 5 }}>Lode Upgrade Analysis.</li>
           </ul>
         </div>
       </div>
@@ -124,15 +121,14 @@ const HomeScreen = () => {
             style={{
               marginTop: 20,
               marginBottom: 20,
-              marginLeft: 20,
+              marginLeft: 30,
               fontSize: 20,
-              listStyleType: "none",
             }}
           >
-            <li>&gt; Scan QR code</li>
-            <li>&gt; Download app</li>
-            <li>&gt; Request your 4-digit code</li>
-            <li>&gt; Enter code to use the new Make An Assignment form</li>
+            <li>Scan QR code</li>
+            <li>Download app</li>
+            <li>Request your 4-digit code</li>
+            <li>Enter code to use the new Make An Assignment form</li>
           </ul>
 
           <p>
