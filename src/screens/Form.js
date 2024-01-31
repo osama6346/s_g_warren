@@ -161,7 +161,7 @@ const FormDashboard = () => {
             Claim No.: ${formData.claimNumber}
             Scope of Service Required: ${formData.scopeofservice}
           `,
-          to_email: "osamaiqbal0986346@gmail.com",
+          to_email: "scott@sgwarren.com",
         },
       };
 
