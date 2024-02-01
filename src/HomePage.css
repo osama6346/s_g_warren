@@ -8,6 +8,14 @@ body {
   /* Replace 'YourFont' with the actual font name you want to use */
 }
 
+.homelogo {
+  margin: 20px 0;
+  font-size: 24px;
+  width: 100%;
+  justify-content: baseline;
+  padding: 20px;
+  align-items: center;
+}
 .homepage-container {
   display: flex;
   flex-direction: column;
@@ -328,4 +336,26 @@ body {
   .approach {
     padding: 10px;
   }
+}
+@media screen and (min-width: 1200px) {
+  .top-section {
+    padding-left: 200px;
+    padding-right: 200px;
+  }
+  .middle-section {
+    padding-left: 200px;
+    padding-right: 200px;
+  }
+  .middle-text{
+    width: 100%;
+  }
+  .bottom-section {
+    padding-left: 200px;
+    padding-right: 200px;
+  }
+  .contact-section {
+    padding-left: 200px;
+    padding-right: 200px;
+  }
+
 }

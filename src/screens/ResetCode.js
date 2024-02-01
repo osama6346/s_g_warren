@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../Register.css";
-import house from "../assets/newhouse.jpeg";
+import house from "../assets/NewHome.jpeg";
 import logo from "../assets/logo.png";
 
 const ResetCode = ({ setIsAdminLoggedIn }) => {
@@ -54,7 +54,7 @@ const ResetCode = ({ setIsAdminLoggedIn }) => {
               onChange={handlePasswordChange}
             />
             <button className="signup" onClick={handleSignInClick}>
-              Sign In As Admin
+              Sign In
             </button>
             {error && <p style={{ color: "red", marginTop: 10 }}>{error}</p>}
           </div>
@@ -62,11 +62,7 @@ const ResetCode = ({ setIsAdminLoggedIn }) => {
       </div>
       <div className="right">
         <div className="inside-right">
-          <div className="text">
-            <h3 className="rightheading">
-              Provide your credentials to continue to Dashboard.
-            </h3>
-          </div>
+          <div className="text"></div>
           <img className="house" src={house} alt="Your Image" />
         </div>
       </div>

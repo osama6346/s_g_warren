@@ -41,11 +41,14 @@
   margin: 20px 0;
   font-size: 24px;
   width: 100%;
-  justify-content: baseline;
+  display: flex;
+  justify-content: center;
   padding: 20px;
+  align-items: center;
 }
 .logoimage {
   margin: 20px;
+  aspect-ratio: 2.5;
 }
 .registertextcontainer {
   display: flex;

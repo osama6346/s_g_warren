@@ -40,9 +40,16 @@ button.login {
   margin: 0 auto;
   margin-top: 20px;
 }
-
+.logintextcontainer{
+  display: flex;
+  width: 70%;
+  justify-content: space-between;
+  align-self: center;
+}
 .house {
-  width: 60%;
+  /* width: 0%; */
+  aspect-ratio: 0.9;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
 @media (max-width: 968px) {
   .insidelogin input {

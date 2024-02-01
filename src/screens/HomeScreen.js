@@ -14,7 +14,7 @@ const HomeScreen = () => {
   return (
     <div className="homepage-container">
       <div className="top-section">
-        <div className="logo">
+        <div className="homelogo">
           <img className="logoimage" src={logo} alt="Logo" />
         </div>
         <div className="buttons">

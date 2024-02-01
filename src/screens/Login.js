@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
 import "../Login.css"; // Import your CSS for styling
-import house from "../assets/newhouse.jpeg";
+import house from "../assets/NewHome.jpeg";
 import logo from "../assets/logo.png";
 
 import { ref, child, get } from "firebase/database";
@@ -117,7 +117,7 @@ const Login = ({ setIsUserLoggedIn }) => {
         </div>
         <div className="register">
           <div className="insidelogin">
-            <div className="registertextcontainer">
+            <div className="logintextcontainer">
               <h2 className="registertext">Login</h2>
               <div className="logintextdiv">
                 <p
@@ -194,9 +194,7 @@ const Login = ({ setIsUserLoggedIn }) => {
       </div>
       <div className="right">
         <div className="inside-right">
-          <div className="text">
-            <h3 className="rightheading">Login to continue to our website!</h3>
-          </div>
+          <div className="text"></div>
           <img className="house" src={house} alt="Your Image" />
         </div>
       </div>
