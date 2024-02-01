@@ -143,39 +143,44 @@ const HomeScreen = () => {
         </div>
       </div>
       <div className="contact-section">
-        <h2 style={{ fontSize: 30, color: "#2d7672" }}>Contact Us</h2>
+        <h2 style={{ fontSize: 30, color: "#2d7672", alignSelf: "center" }}>
+          Contact Us
+        </h2>
         <div className="contact-options">
           <div className="contact-option">
-            <img
+            {/* <img
               src={email}
               alt="Option 1"
               className="option-image"
               style={{ height: 55, width: 55 }}
-            />
+            /> */}
             <div className="option-text">
               <a href="mailto:scott@sgwarren.com">scott@sgwarren.com</a>
             </div>
           </div>
           <div className="contact-option">
-            <img
+            {/* <img
               src={fone}
               alt="Option 1"
               className="option-image"
               style={{ height: 55, width: 55 }}
-            />
+            /> */}
             <div className="option-text">
               <a href="tel:+4407999512">+440-799-9512</a>
             </div>
           </div>
           <div className="contact-option">
-            <img
+            {/* <img
               src={loc}
               alt="Option 1"
               className="option-image"
               style={{ marginLeft: -5, height: 63, width: 63 }}
-            />
-            <div className="option-text address">
-              <p>Corporate HQ</p>
+            /> */}
+            <div
+              className="option-text address"
+              style={{ textAlign: "center" }}
+            >
+              <p style={{ alignSelf: "center" }}>Corporate HQ</p>
               <p>8700 Riverview Road.</p>
               <p>Brecksville Ohio. 44141-1727</p>
             </div>
