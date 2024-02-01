@@ -197,7 +197,9 @@ body {
   width: 100%;
   flex-direction: column;
   box-sizing: border-box;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
+  justify-content: center;
+  align-items: center;
 }
 
 .contact-options {
@@ -210,18 +212,19 @@ body {
   box-sizing: border-box;
   margin-bottom: 30px;
   flex-direction: column;
+  text-align: center;
 }
+
 .contact-options p {
   font-size: 18px;
   padding: 0px;
 }
-.contact-option {
+/* .contact-option {
   display: flex;
   align-self: center;
   height: 30px;
-}
+} */
 .option-text {
-  padding: 5px;
 }
 .below-section {
   display: flex;
@@ -246,12 +249,9 @@ body {
 
 @media (max-width: 450px) {
   .contact-section {
-    margin-bottom: 50px;
+    margin-bottom: 0px;
   }
-  .contact-options{
-    padding-left: 0px;
-    width: 110%;
-  }
+
   .top-section {
     height: 10vh;
   }
@@ -286,7 +286,7 @@ body {
     flex-direction: row;
     align-self: flex-start;
   }
-  
+
   .contact-options {
     flex-direction: column;
     align-self: flex-start;
@@ -348,7 +348,7 @@ body {
     padding-left: 200px;
     padding-right: 200px;
   }
-  .middle-text{
+  .middle-text {
     width: 100%;
   }
   .bottom-section {
@@ -359,7 +359,6 @@ body {
     padding-left: 200px;
     padding-right: 200px;
   }
-
 }
 @media screen and (min-width: 1600px) {
   .top-section {
@@ -370,7 +369,7 @@ body {
     padding-left: 400px;
     padding-right: 400px;
   }
-  .middle-text{
+  .middle-text {
     width: 100%;
   }
   .bottom-section {
@@ -381,7 +380,31 @@ body {
     padding-left: 400px;
     padding-right: 400px;
   }
-  .logoimage{
+  .logoimage {
+    height: 150px;
+  }
+}
+@media screen and (min-width: 1800px) {
+  .top-section {
+    padding-left: 600px;
+    padding-right: 600px;
+  }
+  .middle-section {
+    padding-left: 600px;
+    padding-right: 600px;
+  }
+  .middle-text {
+    width: 100%;
+  }
+  .bottom-section {
+    padding-left: 600px;
+    padding-right: 600px;
+  }
+  .contact-section {
+    padding-left: 600px;
+    padding-right: 600px;
+  }
+  .logoimage {
     height: 150px;
   }
 }
