@@ -153,7 +153,8 @@ const HomeScreen = () => {
               style={{ height: 55, width: 55 }}
             />
             <div className="option-text">
-              <p>scott@sgwarren.com</p>
+              <p>scott@sgwarren.</p>
+              <p>com</p>
             </div>
           </div>
           <div className="contact-option">
