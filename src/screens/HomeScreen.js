@@ -108,8 +108,8 @@ const HomeScreen = () => {
       </div>
       <div className="bottom-section">
         <div className="bottom-text">
-          <h2 style={{ marginBottom: 10 }}>
-            Scan The QR Code to get access our app!!
+          <h2 style={{ marginBottom: 10, color: "#2d7672" }}>
+            Scan The QR Code to get the App
           </h2>
           <p style={{}}>
             To get started, scan the QR code to be taken directly to our new
@@ -143,7 +143,7 @@ const HomeScreen = () => {
         </div>
       </div>
       <div className="contact-section">
-        <h2 style={{ fontSize: 30 }}>Contact Us</h2>
+        <h2 style={{ fontSize: 30, color: "#2d7672" }}>Contact Us</h2>
         <div className="contact-options">
           <div className="contact-option">
             <img

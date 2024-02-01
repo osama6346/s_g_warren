@@ -38,7 +38,7 @@ const ResetCode = ({ setIsAdminLoggedIn }) => {
         </div>
         <div className="register">
           <div className="insideregister">
-            <h2>Log In As Admin</h2>
+            <h2 style={{color:'#2d7672' }}>Log In as Admin</h2>
             <input
               style={{ marginTop: 20 }}
               type="email"
