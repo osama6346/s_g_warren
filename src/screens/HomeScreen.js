@@ -155,7 +155,12 @@ const HomeScreen = () => {
               style={{ height: 55, width: 55 }}
             /> */}
             <div className="option-text">
-              <a href="mailto:scott@sgwarren.com">scott@sgwarren.com</a>
+              <a
+                style={{ color: "#2d7672", fontWeight: "bold" }}
+                href="mailto:scott@sgwarren.com"
+              >
+                scott@sgwarren.com
+              </a>
             </div>
           </div>
           <div className="contact-option">
@@ -166,7 +171,9 @@ const HomeScreen = () => {
               style={{ height: 55, width: 55 }}
             /> */}
             <div className="option-text">
-              <a href="tel:+4407999512">+440-799-9512</a>
+              <a style={{ color: "#2d7672" }} href="tel:+4407999512">
+                +440-799-9512
+              </a>
             </div>
           </div>
           <div className="contact-option">
@@ -178,7 +185,7 @@ const HomeScreen = () => {
             /> */}
             <div
               className="option-text address"
-              style={{ textAlign: "center" }}
+              style={{ textAlign: "center", marginTop: 0 }}
             >
               <p style={{ alignSelf: "center" }}>Corporate HQ</p>
               <p>8700 Riverview Road.</p>
