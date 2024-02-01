@@ -153,8 +153,7 @@ const HomeScreen = () => {
               style={{ height: 55, width: 55 }}
             />
             <div className="option-text">
-              <p>scott@sgwarren.</p>
-              <p>com</p>
+              <a href="mailto:scott@sgwarren.com">scott@sgwarren.com</a>
             </div>
           </div>
           <div className="contact-option">
@@ -165,7 +164,7 @@ const HomeScreen = () => {
               style={{ height: 55, width: 55 }}
             />
             <div className="option-text">
-              <p>+440-799-9512</p>
+              <a href="tel:+4407999512">+440-799-9512</a>
             </div>
           </div>
           <div className="contact-option">
