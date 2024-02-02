@@ -200,6 +200,7 @@ body {
   margin-bottom: 0px;
   justify-content: center;
   align-items: center;
+  box-shadow: 0px 0px 25px 20px rgba(237, 245, 245, 0.5);
 }
 
 .contact-options {
@@ -224,7 +225,7 @@ body {
   align-self: center;
   height: 30px;
 } */
-.option-text{
+.option-text {
   margin: 5px;
 }
 .below-section {
