@@ -151,7 +151,6 @@ const HomeScreen = () => {
             Contact Us
           </h2>
         </div>
-        <div className="contact-options">
           <div
             className="option-text address"
             style={{ textAlign: "center", marginTop: 0 }}
@@ -200,7 +199,6 @@ const HomeScreen = () => {
               <p>Brecksville Ohio. 44141-1727</p>
             </div>
           </div>
-        </div>
       </div>
       <div className="below-section">
         <h4>Download Now</h4>

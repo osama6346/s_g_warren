@@ -224,7 +224,8 @@ body {
   align-self: center;
   height: 30px;
 } */
-.option-text {
+.option-text{
+  margin: 5px;
 }
 .below-section {
   display: flex;
