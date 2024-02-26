@@ -137,8 +137,7 @@ body {
   position: absolute;
   top: 0px;
   right: 20px;
-  border-radius: 20px;
-  background-color: transparent;
+  background-color: "rgba(0, 0, 0, 0.5)";
   padding: 20px;
   padding-top: 3px;
   max-width: 500px;
@@ -269,6 +268,16 @@ body {
     width: 150px;
     align-self: flex-start;
   }
+
+  .top-left-image {
+    height: 350px;
+  }
+  .image-container {
+    height: 400px;
+  }
+  .approach {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  }
 }
 @media (min-width: 451px) and (max-width: 768px) {
   .signbutton,
@@ -334,9 +343,6 @@ body {
     align-items: center;
   }
 
-  .image-container {
-    height: 500px;
-  }
   .approach {
     padding: 10px;
   }
