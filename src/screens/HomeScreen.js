@@ -51,15 +51,20 @@ const HomeScreen = () => {
             <h3 className="scottname">Scott G. Warren</h3>
           </div>
         </div>
-        <p style={{ marginTop: 15 }}></p>
+        {/* <p style={{ marginTop: 0 }}></p> */}
         <h1
-          style={{ color: "white", marginTop: 20 }}
+          style={{
+            color: "white",
+            textDecoration: "underline", // Add underline
+            fontFamily: "Arial, sans-serif", // Use a professional font
+          }}
           className="middle-heading"
         >
           OUR APPROACH
         </h1>
+
         <div className="middle-text">
-          <p style={{ marginTop: 10 }}></p>
+          <p style={{ marginTop: 20 }}></p>
           <h2 className="main-heading">Welcome to S.G. Warren & Assoc.</h2>
           <p style={{ marginTop: 15 }}></p>
           <p>
@@ -88,7 +93,7 @@ const HomeScreen = () => {
           <ul
             style={{
               marginTop: 30,
-              marginLeft: 30,
+              marginLeft: 35,
               fontSize: 20,
               textAlign: "left",
             }}
@@ -147,58 +152,56 @@ const HomeScreen = () => {
           className="option-text address"
           style={{ textAlign: "center", marginTop: 0 }}
         >
-          <h2 style={{ fontSize: 30, color: "#2d7672" }}>
-            Contact Us
-          </h2>
+          <h2 style={{ fontSize: 30, color: "#2d7672" }}>Contact Us</h2>
         </div>
-          <div
-            className="option-text address"
-            style={{ textAlign: "center", marginTop: 0 }}
-          >
-            {/* <img
+        <div
+          className="option-text address"
+          style={{ textAlign: "center", marginTop: 0 }}
+        >
+          {/* <img
               src={email}
               alt="Option 1"
               className="option-image"
               style={{ height: 55, width: 55 }}
             /> */}
 
-            <p
-              style={{ color: "#2d7672", fontWeight: "bold" }}
-              href="mailto:scott@sgwarren.com"
-            >
-              scott@sgwarren.com
-            </p>
-          </div>
-          <div
-            className="option-text address"
-            style={{ textAlign: "center", marginTop: 0 }}
+          <p
+            style={{ color: "#2d7672", fontWeight: "bold" }}
+            href="mailto:scott@sgwarren.com"
           >
-            {/* <img
+            scott@sgwarren.com
+          </p>
+        </div>
+        <div
+          className="option-text address"
+          style={{ textAlign: "center", marginTop: 0 }}
+        >
+          {/* <img
               src={fone}
               alt="Option 1"
               className="option-image"
               style={{ height: 55, width: 55 }}
             /> */}
-            <p style={{ color: "#2d7672" }} href="tel:+4407999512">
-              +440-799-9512
-            </p>
-          </div>
-          <div className="option-text address">
-            {/* <img
+          <p style={{ color: "#2d7672" }} href="tel:+4407999512">
+            +440-799-9512
+          </p>
+        </div>
+        <div className="option-text address">
+          {/* <img
               src={loc}
               alt="Option 1"
               className="option-image"
               style={{ marginLeft: -5, height: 63, width: 63 }}
             /> */}
-            <div
-              className="option-text address"
-              style={{ textAlign: "center", marginTop: 0 }}
-            >
-              <p style={{ alignSelf: "center" }}>Corporate HQ</p>
-              <p>8700 Riverview Road.</p>
-              <p>Brecksville Ohio. 44141-1727</p>
-            </div>
+          <div
+            className="option-text address"
+            style={{ textAlign: "center", marginTop: 0 }}
+          >
+            <p style={{ alignSelf: "center" }}>Corporate HQ</p>
+            <p>8700 Riverview Road.</p>
+            <p>Brecksville Ohio. 44141-1727</p>
           </div>
+        </div>
       </div>
       <div className="below-section">
         <h4>Download Now</h4>
