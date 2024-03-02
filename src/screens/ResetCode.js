@@ -106,7 +106,7 @@ const ResetCode = ({ setIsAdminLoggedIn }) => {
           </div>
         </div>
         <div style={{ color: "#2d7672", textAlign: "center" }}>
-          Serving the Continential U.S., Hawaii and the Caribbean
+          Serving the Continental U.S, Hawaii, and the Caribbean
         </div>
       </div>
     </div>
