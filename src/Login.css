@@ -52,7 +52,7 @@ button.login {
     height: 50px;
   }
   .insidelogin {
-    width: 90%;
+    width: 100%;
   }
   .logininputs {
     justify-content: space-between;

@@ -144,8 +144,7 @@ const Login = ({ setIsUserLoggedIn }) => {
                 marginLeft: 15,
               }}
             >
-              We sent 4 digit code to your Email After Verification. Use that to
-              continue
+              We sent 4 digit code to your Email After Verification.
             </p>
             <div className="logininputs">
               <input
