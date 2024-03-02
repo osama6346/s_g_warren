@@ -1,7 +1,7 @@
 .insidelogin {
   display: flex;
   flex-direction: column;
-  width: 70%;
+  width: 40%;
   box-sizing: border-box;
 }
 
@@ -40,31 +40,26 @@ button.login {
   margin: 0 auto;
   margin-top: 20px;
 }
-.logintextcontainer{
+.logintextcontainer {
   display: flex;
   width: 70%;
   justify-content: space-between;
   align-self: center;
-}
-.house {
-  /* width: 0%; */
-  aspect-ratio: 0.9;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
 @media (max-width: 968px) {
   .insidelogin input {
     width: 50px;
     height: 50px;
   }
-  .insidelogin{
+  .insidelogin {
     width: 90%;
   }
-  .logininputs{
+  .logininputs {
     justify-content: space-between;
     margin-top: 10px;
     gap: 10px;
   }
-  .insidelogin input{
+  .insidelogin input {
     margin: 0px;
   }
 }

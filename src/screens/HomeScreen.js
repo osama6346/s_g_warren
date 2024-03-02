@@ -39,7 +39,7 @@ const HomeScreen = () => {
       <div className="middle-section">
         <div className="image-container">
           <img src={newhome} alt="House" className="top-left-image " />
-          <div className="approach">
+          {/* <div className="approach">
             <h2 className="mission" style={{ marginTop: 5 }}>
               OUR MISSION
             </h2>
@@ -49,14 +49,60 @@ const HomeScreen = () => {
               while upholding the highest standards of integrity..."
             </p>
             <h3 className="scottname">Scott G. Warren</h3>
+          </div> */}
+        </div>
+        <div className="missiondiv">
+          <div
+            style={{
+              backgroundColor: "white",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center",
+              padding: 20,
+            }}
+          >
+            <h2
+              className=""
+              style={{
+                marginTop: 5,
+                color: "#2d7672",
+                textDecoration: "underline",
+                marginBottom: 20,
+                textAlign: "center",
+              }}
+            >
+              OUR MISSION
+            </h2>
+            <p
+              className=""
+              style={{
+                fontSize: "1.5rem",
+                width: "80%",
+                textAlign: "center",
+                marginBottom: 20,
+              }}
+            >
+              "Delivering clients the most trustworthy and defensible consulting
+              services supported by real-world market insights, all while
+              upholding the highest standards of integrity."
+            </p>
+            <h3
+              className=""
+              style={{ fontSize: 20, color: "", textAlign: "center" }}
+            >
+              ~ Scott G. Warren
+            </h3>
           </div>
         </div>
         {/* <p style={{ marginTop: 0 }}></p> */}
         <h1
           style={{
-            color: "white",
             textDecoration: "underline", // Add underline
             fontFamily: "Arial, sans-serif", // Use a professional font
+            textAlign: "center",
+            marginTop: "2em",
+            color: "#2d7672",
           }}
           className="middle-heading"
         >
@@ -64,24 +110,27 @@ const HomeScreen = () => {
         </h1>
 
         <div className="middle-text">
-          <p style={{ marginTop: 20 }}></p>
-          <h2 className="main-heading">Welcome to S.G. Warren & Assoc.</h2>
-          <p style={{ marginTop: 15 }}></p>
-          <p>
+          <h2
+            className="main-heading"
+            style={{
+              color: "#2d7672",
+              marginTop: "2rem",
+              fontWeight: "lighter",
+            }}
+          >
+            Welcome to S.G. Warren & Assoc.
+          </h2>
+          <p style={{ backgroundColor: "" }}>
             S.G. Warren & Assoc. is a national consulting firm specializing in
-            the commercial construction and insurance industries, with an
-            emphasis on natural disasters, damage assessment, and Dispute
-            Resolution.
+            the commercial construction and industries, with an emphasis on
+            natural disasters, damage assessment, and Dispute Resolution.
           </p>
-          <p style={{ marginTop: 15 }}></p>
 
-          <p>
+          <p style={{ backgroundColor: "" }}>
             S.G. Warren & Assoc. recognizes service as the primary component of
             the product we provide. We strive to deliver the most detailed and
             accurate reporting at the most competitive rates in the industry.
           </p>
-          <p style={{ marginTop: 15 }}></p>
-
           <p>
             We are committed to providing the highest level of communication
             while utilizing the most advanced technologies available today.
@@ -90,30 +139,30 @@ const HomeScreen = () => {
           </p>
 
           {/* Bulleted List */}
-          <ul
-            style={{
-              marginTop: 30,
-              marginLeft: 35,
-              fontSize: 20,
-              textAlign: "left",
-            }}
-          >
+          <ul style={{ textAlign: "left", marginTop: "2rem" }}>
             <li>Vendor Support on Property Loss Estimating.</li>
-            <li style={{ marginTop: 5 }}>JOB SITE / Project Monitoring.</li>
-            <li style={{ marginTop: 5 }}>Mitigation Review and Audit.</li>
-            <li style={{ marginTop: 5 }}>Subrogation Review and Audit.</li>
-            <li style={{ marginTop: 5 }}>
-              Dispute Resolution & Appraisal Services.
-            </li>
-            <li style={{ marginTop: 5 }}>Litigation Support.</li>
-            <li style={{ marginTop: 5 }}>Builders Risk Services.</li>
-            <li style={{ marginTop: 5 }}>Lode Upgrade Analysis.</li>
+            <li>JOB SITE / Project Monitoring.</li>
+            <li>Mitigation Review and Audit.</li>
+            <li>Subrogation Review and Audit.</li>
+            <li>Dispute Resolution & Appraisal Services.</li>
+            <li>Litigation Support.</li>
+            <li>Builders Risk Services.</li>
+            <li>Lode Upgrade Analysis.</li>
           </ul>
         </div>
       </div>
+      <div className="blocker">
+        ....................................................................................
+      </div>
       <div className="bottom-section">
-        <div className="bottom-text">
-          <h2 style={{ marginBottom: 10, color: "#2d7672" }}>
+        <div className="middle-text">
+          <h2
+            style={{
+              marginBottom: 10,
+              color: "#2d7672",
+              fontWeight: "lighter",
+            }}
+          >
             Scan The QR Code to get the App
           </h2>
           <p style={{}}>
@@ -121,26 +170,23 @@ const HomeScreen = () => {
             S.G.Warren & Assoc. app. You will then be assigned a unique 4-digit
             code that will allow you access to the new Make An Assignment form.
           </p>
-
-          <ul
-            style={{
-              marginTop: 20,
-              marginBottom: 20,
-              marginLeft: 30,
-              fontSize: 20,
-            }}
-          >
-            <li>Scan QR code</li>
-            <li>Download app</li>
-            <li>Request your 4-digit code</li>
-            <li>Enter code to use the new Make An Assignment form</li>
-          </ul>
-
+          <p></p>
+          <h4 style={{ color: "#2d7672" }}>1) Scan QR code</h4>
+          <h4 style={{ color: "#2d7672" }}>2) Download app</h4>
+          <h4 style={{ color: "#2d7672" }}>3) Request your 4-digit code</h4>
+          <h4 style={{ color: "#2d7672" }}>
+            4) Enter code to use the new Make An Assignment form
+          </h4>
+          <p></p>
           <p>
             After the initial sign-up, your code and the top section of the form
             will both prefill for convenience. We’re proud to bring this to you
             and hope it will help streamline your experience with S.G.Warren &
             Assoc.
+          </p>
+          <p>
+            We’re proud to bring this to you and hope it will help streamline
+            your experience with S.G.Warren & Assoc.
           </p>
         </div>
         <div className="qrimage">
@@ -158,13 +204,6 @@ const HomeScreen = () => {
           className="option-text address"
           style={{ textAlign: "center", marginTop: 0 }}
         >
-          {/* <img
-              src={email}
-              alt="Option 1"
-              className="option-image"
-              style={{ height: 55, width: 55 }}
-            /> */}
-
           <p
             style={{ color: "#2d7672", fontWeight: "bold" }}
             href="mailto:scott@sgwarren.com"
@@ -176,23 +215,11 @@ const HomeScreen = () => {
           className="option-text address"
           style={{ textAlign: "center", marginTop: 0 }}
         >
-          {/* <img
-              src={fone}
-              alt="Option 1"
-              className="option-image"
-              style={{ height: 55, width: 55 }}
-            /> */}
           <p style={{ color: "#2d7672" }} href="tel:+4407999512">
             +440-799-9512
           </p>
         </div>
         <div className="option-text address">
-          {/* <img
-              src={loc}
-              alt="Option 1"
-              className="option-image"
-              style={{ marginLeft: -5, height: 63, width: 63 }}
-            /> */}
           <div
             className="option-text address"
             style={{ textAlign: "center", marginTop: 0 }}
