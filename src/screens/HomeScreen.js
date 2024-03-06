@@ -24,7 +24,7 @@ const HomeScreen = () => {
               navigate("Register");
             }}
           >
-            Sign Up
+            Register
           </button>
           <button
             className="loginbutton"
@@ -115,7 +115,7 @@ const HomeScreen = () => {
             style={{
               color: "#2d7672",
               marginTop: "2rem",
-              fontWeight: "lighter",
+              fontWeight: "bold",
             }}
           >
             Welcome to S.G. Warren & Assoc.
@@ -160,7 +160,7 @@ const HomeScreen = () => {
             style={{
               marginBottom: 10,
               color: "#2d7672",
-              fontWeight: "lighter",
+              fontWeight: "bold",
             }}
           >
             Scan The QR Code to get the App
@@ -183,10 +183,6 @@ const HomeScreen = () => {
             will both prefill for convenience. We’re proud to bring this to you
             and hope it will help streamline your experience with S.G.Warren &
             Assoc.
-          </p>
-          <p>
-            We’re proud to bring this to you and hope it will help streamline
-            your experience with S.G.Warren & Assoc.
           </p>
         </div>
         <div className="qrimage">
@@ -227,6 +223,9 @@ const HomeScreen = () => {
             <p style={{ alignSelf: "center" }}>Corporate HQ</p>
             <p>8700 Riverview Road.</p>
             <p>Brecksville Ohio. 44141-1727</p>
+          </div>
+          <div style={{ color: "#2d7672", textAlign: "center" }}>
+            Serving the Continental U.S, Hawaii, and the Caribbean
           </div>
         </div>
       </div>

@@ -122,7 +122,7 @@ const Register = () => {
               onClick={handleSignUp}
               disabled={isSigningUp}
             >
-              {isSigningUp ? "Signing Up..." : "Sign Up"}
+              {isSigningUp ? "Registering..." : "Register"}
             </button>
             {error && <p className="error">{error}</p>}
           </div>
