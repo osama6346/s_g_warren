@@ -1,6 +1,6 @@
 import React from "react";
 import "../HomePage.css";
-import logo from "../assets/logo.png";
+import logo from "../assets/logo2.jpeg";
 import qr from "../assets/qr.png";
 import email from "../assets/mail.png";
 import newhome from "../assets/NewHome.jpeg";
@@ -96,7 +96,7 @@ const HomeScreen = () => {
           </div>
         </div>
         {/* <p style={{ marginTop: 0 }}></p> */}
-        <h1
+        <h2
           style={{
             textDecoration: "underline", // Add underline
             fontFamily: "Arial, sans-serif", // Use a professional font
@@ -107,13 +107,15 @@ const HomeScreen = () => {
           className="middle-heading"
         >
           OUR APPROACH
-        </h1>
+        </h2>
 
         <div className="middle-text">
           <h2
             className="main-heading"
             style={{
               color: "#2d7672",
+              
+            fontFamily: "Arial, sans-serif", // Use a professional font
               marginTop: "2rem",
               fontWeight: "bold",
             }}
@@ -225,7 +227,7 @@ const HomeScreen = () => {
             <p>Brecksville Ohio. 44141-1727</p>
           </div>
           <div style={{ color: "#2d7672", textAlign: "center" }}>
-            Serving the Continental U.S, Hawaii, and the Caribbean
+            Covering the Continental U.S, Hawaii, and the Caribbean
           </div>
         </div>
       </div>

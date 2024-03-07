@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from "react";
 import "../Login.css"; // Import your CSS for styling
 import house from "../assets/NewHome.jpeg";
-import logo from "../assets/logo.png";
+import logo from "../assets/logo2.jpeg";
 
 import { ref, child, get } from "firebase/database";
 import { database } from "../config/firebase"; // Import your Firebase configuration
@@ -113,7 +113,9 @@ const Login = ({ setIsUserLoggedIn }) => {
     <div className="container">
       <div className="left">
         <div className="logo">
-          <img className="logoimage" src={logo} alt="Your Image" />
+          <img onClick={() => {
+                    navigate("/");
+                  }} className="logoimage" src={logo} alt="Your Image" />
         </div>
         <div className="register">
           <div className="insidelogin">
@@ -193,7 +195,7 @@ const Login = ({ setIsUserLoggedIn }) => {
       </div>
       <div
         className="contact-section"
-        style={{ backgroundColor: "#f3f4f6", marginTop: 50, paddingBottom: 10 }}
+        style={{ backgroundColor: "#fff", marginTop: 50, paddingBottom: 10 }}
       >
         <div
           className="option-text address"
@@ -231,7 +233,7 @@ const Login = ({ setIsUserLoggedIn }) => {
           </div>
         </div>
         <div style={{ color: "#2d7672", textAlign: "center" }}>
-          Serving the Continental U.S, Hawaii, and the Caribbean
+          Covering the Continental U.S, Hawaii, and the Caribbean
         </div>
       </div>
       {/* <div className="right">

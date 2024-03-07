@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../Register.css";
 import house from "../assets/NewHome.jpeg";
-import logo from "../assets/logo.png";
+import logo from "../assets/logo2.jpeg";
 
 const ResetCode = ({ setIsAdminLoggedIn }) => {
   const navigate = useNavigate();
@@ -34,7 +34,9 @@ const ResetCode = ({ setIsAdminLoggedIn }) => {
     <div className="container">
       <div className="left">
         <div className="logo">
-          <img className="logoimage" src={logo} alt="Your Image" />
+          <img onClick={() => {
+                    navigate("/");
+                  }} className="logoimage" src={logo} alt="Your Image" />
         </div>
         <div className="register">
           <div className="insideregister">
@@ -68,7 +70,7 @@ const ResetCode = ({ setIsAdminLoggedIn }) => {
       </div> */}
       <div
         className="contact-section"
-        style={{ backgroundColor: "#f3f4f6", marginTop: 50, paddingBottom: 10 }}
+        style={{ backgroundColor: "#fff", marginTop: 50, paddingBottom: 10 }}
       >
         <div
           className="option-text address"
@@ -106,7 +108,7 @@ const ResetCode = ({ setIsAdminLoggedIn }) => {
           </div>
         </div>
         <div style={{ color: "#2d7672", textAlign: "center" }}>
-          Serving the Continental U.S, Hawaii, and the Caribbean
+          Covering the Continental U.S, Hawaii, and the Caribbean
         </div>
       </div>
     </div>
