@@ -118,6 +118,7 @@ const HomeScreen = () => {
             fontFamily: "Arial, sans-serif", // Use a professional font
               marginTop: "2rem",
               fontWeight: "bold",
+              fontSize:'24px'
             }}
           >
             Welcome to S.G. Warren & Assoc.
@@ -163,6 +164,9 @@ const HomeScreen = () => {
               marginBottom: 10,
               color: "#2d7672",
               fontWeight: "bold",
+              
+            fontFamily: "Arial, sans-serif", // Use a professional font
+              fontSize:'24px'
             }}
           >
             Scan The QR Code to get the App
