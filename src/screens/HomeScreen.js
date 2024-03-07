@@ -77,7 +77,7 @@ const HomeScreen = () => {
             <p
               className=""
               style={{
-                fontSize: "1.5rem",
+                fontSize: "22px",
                 width: "80%",
                 textAlign: "center",
                 marginBottom: 20,
