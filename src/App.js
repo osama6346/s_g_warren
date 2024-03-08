@@ -34,7 +34,7 @@ function App() {
       <div>
         <Routes>
           <Route path="/" element={<HomeScreen />} />
-          <Route path="/login" element={<Login />} />
+          <Route path="/login" element={<Login setIsUserLoggedIn={setIsUserLoggedIn}/>} />
           <Route path="/register" element={<Register />} />
           <Route
             path="/adminlogin"
