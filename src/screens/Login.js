@@ -96,9 +96,9 @@ const Login = ({ setIsUserLoggedIn }) => {
         localStorage.setItem("email", matchingUser.email);
         localStorage.setItem("company", matchingUser.company);
         localStorage.setItem("phone", matchingUser.phone);
-
+        setIsUserLoggedIn(true);
         localStorage.setItem("isUserLoggedIn", "true");
-        navigate("/form");
+        navigate("/form", {replace: true});
       } else {
         setInvalidCode(true);
       }
