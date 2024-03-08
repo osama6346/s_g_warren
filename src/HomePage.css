@@ -374,6 +374,10 @@ body {
   .approach {
     padding: 10px;
   }
+  .homelogoimage {
+    width: 150px;
+    align-self: flex-start;
+  }
 }
 /* @media screen and (min-width: 1200px) {
   .top-section {
