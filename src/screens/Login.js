@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from "react";
 import "../Login.css"; // Import your CSS for styling
 import house from "../assets/NewHome.jpeg";
-import logo from "../assets/logo.png";
+import logo from "../assets/logo2.jpeg";
 
 import { ref, child, get } from "firebase/database";
 import { database } from "../config/firebase"; // Import your Firebase configuration
@@ -96,7 +96,7 @@ const Login = ({ setIsUserLoggedIn }) => {
         localStorage.setItem("email", matchingUser.email);
         localStorage.setItem("company", matchingUser.company);
         localStorage.setItem("phone", matchingUser.phone);
-
+        setIsUserLoggedIn(true);
         localStorage.setItem("isUserLoggedIn", "true");
         navigate("/form");
       } else {
@@ -113,7 +113,9 @@ const Login = ({ setIsUserLoggedIn }) => {
     <div className="container">
       <div className="left">
         <div className="logo">
-          <img className="logoimage" src={logo} alt="Your Image" />
+          <img onClick={() => {
+            navigate("/");
+          }} className="logoimage" src={logo} alt="Your Image" />
         </div>
         <div className="register">
           <div className="insidelogin">
@@ -191,49 +193,28 @@ const Login = ({ setIsUserLoggedIn }) => {
           </div>
         </div>
       </div>
-      <div
-        className="contact-section"
-        style={{ backgroundColor: "#f3f4f6", marginTop: 50, paddingBottom: 10 }}
-      >
-        <div
-          className="option-text address"
-          style={{ textAlign: "center", marginTop: 0 }}
-        >
+      <div className="contact-section">
+        <div className="option-text address" style={{ textAlign: "center", marginTop: 0 }}>
           <h2 style={{ fontSize: 30, color: "#2d7672" }}>Contact Us</h2>
         </div>
-        <div
-          className="option-text address"
-          style={{ textAlign: "center", marginTop: 0 }}
-        >
-          <p
-            style={{ color: "#2d7672", fontWeight: "bold" }}
-            href="mailto:scott@sgwarren.com"
-          >
-            scott@sgwarren.com
-          </p>
+        <div className="option-text address" style={{ textAlign: "center", marginTop: 0 }}>
+          <a href="mailto:scott@sgwarren.com" style={{ color: "#2d7672", fontWeight: "bold" }}>scott@sgwarren.com</a>
         </div>
-        <div
-          className="option-text address"
-          style={{ textAlign: "center", marginTop: 0 }}
-        >
-          <p style={{ color: "#2d7672" }} href="tel:+4407999512">
-            +440-799-9512
-          </p>
+        <div className="option-text address" style={{ textAlign: "center", marginTop: 0 }}>
+          <a href="tel:+4407999512" style={{ color: "#2d7672" }}>+440-799-9512</a>
         </div>
         <div className="option-text address">
-          <div
-            className="option-text address"
-            style={{ textAlign: "center", marginTop: 0 }}
-          >
+          <div className="option-text address" style={{ textAlign: "center", marginTop: 0 }}>
             <p style={{ alignSelf: "center" }}>Corporate HQ</p>
             <p>8700 Riverview Road.</p>
             <p>Brecksville Ohio. 44141-1727</p>
           </div>
-        </div>
-        <div style={{ color: "#2d7672", textAlign: "center" }}>
-          Serving the Continental U.S, Hawaii, and the Caribbean
+          <div style={{ color: "#2d7672", textAlign: "center" }}>
+            Covering the Continental U.S, Hawaii, and the Caribbean
+          </div>
         </div>
       </div>
+
       {/* <div className="right">
         <div className="inside-right">
           <div className="text"></div>

@@ -16,7 +16,7 @@ const Adminhome = () => {
   };
 
   return (
-    <div className="container">
+    <div className="admincontainer">
       <div className="sidebar">
         <div className="sidebarcontainer">
           <div

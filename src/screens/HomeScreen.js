@@ -1,6 +1,6 @@
 import React from "react";
 import "../HomePage.css";
-import logo from "../assets/logo.png";
+import logo from "../assets/logo2.jpeg";
 import qr from "../assets/qr.png";
 import email from "../assets/mail.png";
 import newhome from "../assets/NewHome.jpeg";
@@ -15,7 +15,7 @@ const HomeScreen = () => {
     <div className="homepage-container">
       <div className="top-section">
         <div className="homelogo">
-          <img className="logoimage" src={logo} alt="Logo" />
+          <img className="homelogoimage" src={logo} alt="Logo" />
         </div>
         <div className="buttons">
           <button
@@ -77,7 +77,7 @@ const HomeScreen = () => {
             <p
               className=""
               style={{
-                fontSize: "1.5rem",
+                fontSize: "22px",
                 width: "80%",
                 textAlign: "center",
                 marginBottom: 20,
@@ -96,7 +96,7 @@ const HomeScreen = () => {
           </div>
         </div>
         {/* <p style={{ marginTop: 0 }}></p> */}
-        <h1
+        <h2
           style={{
             textDecoration: "underline", // Add underline
             fontFamily: "Arial, sans-serif", // Use a professional font
@@ -107,15 +107,18 @@ const HomeScreen = () => {
           className="middle-heading"
         >
           OUR APPROACH
-        </h1>
+        </h2>
 
         <div className="middle-text">
           <h2
             className="main-heading"
             style={{
               color: "#2d7672",
+
+              fontFamily: "Arial, sans-serif", // Use a professional font
               marginTop: "2rem",
               fontWeight: "bold",
+              fontSize: '24px'
             }}
           >
             Welcome to S.G. Warren & Assoc.
@@ -161,6 +164,9 @@ const HomeScreen = () => {
               marginBottom: 10,
               color: "#2d7672",
               fontWeight: "bold",
+
+              fontFamily: "Arial, sans-serif", // Use a professional font
+              fontSize: '24px'
             }}
           >
             Scan The QR Code to get the App
@@ -190,45 +196,27 @@ const HomeScreen = () => {
         </div>
       </div>
       <div className="contact-section">
-        <div
-          className="option-text address"
-          style={{ textAlign: "center", marginTop: 0 }}
-        >
+        <div className="option-text address" style={{ textAlign: "center", marginTop: 0 }}>
           <h2 style={{ fontSize: 30, color: "#2d7672" }}>Contact Us</h2>
         </div>
-        <div
-          className="option-text address"
-          style={{ textAlign: "center", marginTop: 0 }}
-        >
-          <p
-            style={{ color: "#2d7672", fontWeight: "bold" }}
-            href="mailto:scott@sgwarren.com"
-          >
-            scott@sgwarren.com
-          </p>
+        <div className="option-text address" style={{ textAlign: "center", marginTop: 0 }}>
+          <a href="mailto:scott@sgwarren.com" style={{ color: "#2d7672", fontWeight: "bold" }}>scott@sgwarren.com</a>
         </div>
-        <div
-          className="option-text address"
-          style={{ textAlign: "center", marginTop: 0 }}
-        >
-          <p style={{ color: "#2d7672" }} href="tel:+4407999512">
-            +440-799-9512
-          </p>
+        <div className="option-text address" style={{ textAlign: "center", marginTop: 0 }}>
+          <a href="tel:+4407999512" style={{ color: "#2d7672" }}>+440-799-9512</a>
         </div>
         <div className="option-text address">
-          <div
-            className="option-text address"
-            style={{ textAlign: "center", marginTop: 0 }}
-          >
+          <div className="option-text address" style={{ textAlign: "center", marginTop: 0 }}>
             <p style={{ alignSelf: "center" }}>Corporate HQ</p>
             <p>8700 Riverview Road.</p>
             <p>Brecksville Ohio. 44141-1727</p>
           </div>
           <div style={{ color: "#2d7672", textAlign: "center" }}>
-            Serving the Continental U.S, Hawaii, and the Caribbean
+            Covering the Continental U.S, Hawaii, and the Caribbean
           </div>
         </div>
       </div>
+
       <div className="below-section">
         <h4>Download Now</h4>
         <div className="download-options">

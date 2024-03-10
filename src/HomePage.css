@@ -16,6 +16,9 @@ body {
   padding: 20px;
   align-items: center;
 }
+.homelogoimage{
+  width: 450px;
+}
 .homepage-container {
   display: flex;
   flex-direction: column;
@@ -29,6 +32,7 @@ body {
 }
 .middle-text li {
   margin-top: 1rem;
+  font-size: 20px;
 }
 .middle-text h4 {
   margin-top: 1rem;
@@ -42,7 +46,7 @@ body {
   align-items: center;
   width: 100%;
   padding: 20px;
-  height: 18vh;
+  height: 20vh;
 }
 
 .logo {
@@ -282,11 +286,10 @@ body {
     font-size: 12px;
     border-radius: 10px;
   }
-  .logoimage {
+  .homelogoimage {
     width: 150px;
     align-self: flex-start;
   }
-
   .top-left-image {
     height: 350px;
     opacity: 0.8;
@@ -370,6 +373,10 @@ body {
   }
   .approach {
     padding: 10px;
+  }
+  .homelogoimage {
+    width: 150px;
+    align-self: flex-start;
   }
 }
 /* @media screen and (min-width: 1200px) {

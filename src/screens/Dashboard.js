@@ -77,16 +77,6 @@ const DashboardComponent = () => {
 
   return (
     <div className="dash-container">
-      <div className="search-bar">
-        <div className="search-input">
-          <FaSearch style={{ marginLeft: 3 }} size={20} />
-          <input type="text" placeholder="Search..." />
-        </div>
-        <Dropdown
-          options={["Settings", "Log Out"]}
-          onSelect={handleDropdownSelect}
-        />
-      </div>
       <div className="dashboardcontainer">
         <div className="insidecontainer">
           <h3>DASHBOARD</h3>

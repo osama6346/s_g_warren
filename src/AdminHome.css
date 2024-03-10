@@ -1,7 +1,8 @@
 /* YourComponent.css */
 
-.container {
+.admincontainer {
   display: flex;
+  flex-direction: row;
   height: 100vh;
   box-sizing: border-box;
 }

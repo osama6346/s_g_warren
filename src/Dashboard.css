@@ -234,9 +234,10 @@ tr:hover {
   justify-content: ""; /* This aligns content to the right */
   border-radius: 5px;
   padding: 0px;
-  width: 20%;
+  width: 30%;
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
   margin: 5px;
+  border-radius: 10px;
 }
 .insideinput {
   width: 100%;
@@ -425,5 +426,8 @@ tr:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+  .below-input{
+    width: 60%;
   }
 }

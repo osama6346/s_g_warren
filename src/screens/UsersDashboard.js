@@ -255,7 +255,6 @@ const UserDashboard = () => {
 
   return (
     <div className="dash-container">
-      <div className="search-bar"></div>
       <div className="dashboardcontainer">
         <div className="insidecontainer">
           <h2>Users</h2>
