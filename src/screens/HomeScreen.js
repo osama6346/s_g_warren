@@ -253,7 +253,7 @@ const HomeScreen = () => {
           </p>
         </div>
         <div className="copyright" style={{ marginTop: 5 }}>
-          Copyright@2015. All Rights Reserved
+          S.G.Warren &Assoc. LLC@2024. All rights reserved
         </div>
       </div>
     </div>
