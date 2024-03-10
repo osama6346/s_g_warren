@@ -118,7 +118,7 @@ const HomeScreen = () => {
               fontFamily: "Arial, sans-serif", // Use a professional font
               marginTop: "2rem",
               fontWeight: "bold",
-              fontSize: '24px'
+              fontSize: "24px",
             }}
           >
             Welcome to S.G. Warren & Assoc.
@@ -166,7 +166,7 @@ const HomeScreen = () => {
               fontWeight: "bold",
 
               fontFamily: "Arial, sans-serif", // Use a professional font
-              fontSize: '24px'
+              fontSize: "24px",
             }}
           >
             Scan The QR Code to get the App
@@ -196,17 +196,36 @@ const HomeScreen = () => {
         </div>
       </div>
       <div className="contact-section">
-        <div className="option-text address" style={{ textAlign: "center", marginTop: 0 }}>
+        <div
+          className="option-text address"
+          style={{ textAlign: "center", marginTop: 0 }}
+        >
           <h2 style={{ fontSize: 30, color: "#2d7672" }}>Contact Us</h2>
         </div>
-        <div className="option-text address" style={{ textAlign: "center", marginTop: 0 }}>
-          <a href="mailto:scott@sgwarren.com" style={{ color: "#2d7672", fontWeight: "bold" }}>scott@sgwarren.com</a>
+        <div
+          className="option-text address"
+          style={{ textAlign: "center", marginTop: 0 }}
+        >
+          <a
+            href="mailto:scott@sgwarren.com"
+            style={{ color: "#2d7672", fontWeight: "bold" }}
+          >
+            scott@sgwarren.com
+          </a>
         </div>
-        <div className="option-text address" style={{ textAlign: "center", marginTop: 0 }}>
-          <a href="tel:+4407999512" style={{ color: "#2d7672" }}>+440-799-9512</a>
+        <div
+          className="option-text address"
+          style={{ textAlign: "center", marginTop: 0 }}
+        >
+          <a href="tel:+4407999512" style={{ color: "#2d7672" }}>
+            +440-799-9512
+          </a>
         </div>
         <div className="option-text address">
-          <div className="option-text address" style={{ textAlign: "center", marginTop: 0 }}>
+          <div
+            className="option-text address"
+            style={{ textAlign: "center", marginTop: 0 }}
+          >
             <p style={{ alignSelf: "center" }}>Corporate HQ</p>
             <p>8700 Riverview Road.</p>
             <p>Brecksville Ohio. 44141-1727</p>
@@ -240,7 +259,10 @@ const HomeScreen = () => {
             Go to Admin Login
           </p>
         </div>
-        <div className="copyright" style={{ marginTop: 5 }}>
+        <div
+          className="copyright"
+          style={{ marginTop: 5, textAlign: "center" }}
+        >
           S.G.Warren &Assoc. LLC@2024. All rights reserved
         </div>
       </div>
