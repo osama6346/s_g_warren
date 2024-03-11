@@ -237,7 +237,14 @@ const HomeScreen = () => {
       </div>
 
       <div className="below-section">
-        <h4>Download Now</h4>
+        <h4
+          style={{
+            textAlign: "center",
+            width: "100%",
+          }}
+        >
+          Download App Here
+        </h4>
         <div className="download-options">
           <img className="download-option" src={appstore} alt="appstore" />
           <img className="download-option" src={play} alt="playstore" />
@@ -251,6 +258,8 @@ const HomeScreen = () => {
               borderColor: "black",
               cursor: "pointer",
               marginTop: 5,
+              textAlign: "center",
+              width: "100%",
             }}
             onClick={() => {
               navigate("/adminlogin");
