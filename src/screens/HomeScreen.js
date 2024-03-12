@@ -260,6 +260,7 @@ const HomeScreen = () => {
               marginTop: 5,
               textAlign: "center",
               width: "100%",
+              fontSize: 18
             }}
             onClick={() => {
               navigate("/adminlogin");
@@ -270,7 +271,7 @@ const HomeScreen = () => {
         </div>
         <div
           className="copyright"
-          style={{ marginTop: 5, textAlign: "center" }}
+          style={{ marginTop: 5, textAlign: "center", fontSize: 16 }}
         >
           S.G.Warren &Assoc. LLC@2024. All rights reserved
         </div>
