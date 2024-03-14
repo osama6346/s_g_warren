@@ -257,7 +257,7 @@ const HomeScreen = () => {
               borderBottomWidth: 1,
               borderColor: "black",
               cursor: "pointer",
-              marginTop: 5,
+              marginTop: 10,
               textAlign: "center",
               width: "100%",
               fontSize: 18
@@ -271,9 +271,9 @@ const HomeScreen = () => {
         </div>
         <div
           className="copyright"
-          style={{ marginTop: 5, textAlign: "center", fontSize: 16 }}
+          style={{ marginTop: 15, textAlign: "center", fontSize: 16 }}
         >
-          S.G.Warren &Assoc. LLC@2024. All rights reserved
+          S.G. Warren & Assoc. LLC ©️ 2024 All Rights Reserved
         </div>
       </div>
     </div>
