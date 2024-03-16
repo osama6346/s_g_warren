@@ -18,6 +18,7 @@ body {
 }
 .homelogoimage{
   width: 450px;
+  margin-top: 7px;
 }
 .homepage-container {
   display: flex;
@@ -259,6 +260,7 @@ body {
   align-items: center;
   padding: 30px;
   padding-top: 10px;
+  padding-bottom: 10px;
   box-sizing: border-box;
 }
 .download-options {
