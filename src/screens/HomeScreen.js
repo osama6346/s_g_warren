@@ -125,8 +125,8 @@ const HomeScreen = () => {
           </h2>
           <p style={{ backgroundColor: "" }}>
             S.G. Warren & Assoc. is a national consulting firm specializing in
-            the commercial construction and industries, with an emphasis on
-            natural disasters, damage assessment, and Dispute Resolution.
+            the commercial construction and insurance industry, with an emphasis
+            on natural disasters, damage assessment, and dispute resolution.
           </p>
 
           <p style={{ backgroundColor: "" }}>
@@ -143,14 +143,14 @@ const HomeScreen = () => {
 
           {/* Bulleted List */}
           <ul style={{ textAlign: "left", marginTop: "2rem" }}>
-            <li>Vendor Support on Property Loss Estimating.</li>
-            <li>JOB SITE / Project Monitoring.</li>
+            <li>Vendor Supported Property Loss Estimating.</li>
+            <li>Job Site / Project Monitoring.</li>
             <li>Mitigation Review and Audit.</li>
             <li>Subrogation Review and Audit.</li>
             <li>Dispute Resolution & Appraisal Services.</li>
             <li>Litigation Support.</li>
             <li>Builders Risk Services.</li>
-            <li>Lode Upgrade Analysis.</li>
+            <li>Code Upgrade Confirmation & Analysis.</li>
           </ul>
         </div>
       </div>
